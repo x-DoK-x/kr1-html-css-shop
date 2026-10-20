@@ -3,46 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог услуг творчества</title>
+  <meta name="description" content="Творческая студия: арт-искусство, мерч, крафт, анимации, дизайн и фотография. Портфолио лучших работ и прайс-лист услуг студии.">
+  <title>Творческая студия — прайс-лист и портфолио</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Прайс-лист</h1>
-      <a href="#">Арт-исскуство</a>
-      <a href="#">Мерч</a>
-      <a href="#">Крафт</a>
-      <a href="#">Анимации</a>
-      <a href="#">Дизайн</a>
-      <a href="#">Фотография</a>
-    </nav>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <!-- Плашка «Прайс-лист»: список ссылок раскрывается при наведении и при фокусе с клавиатуры -->
+            <div class="price-menu">
+              <button class="price-menu__toggle" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+
+              <div class="price-menu__panel" id="price-menu-panel">
+                <ul class="price-menu__list">
+                  <li class="price-menu__item"><a class="price-menu__link" href="#">Арт-искусство</a></li>
+                  <li class="price-menu__item"><a class="price-menu__link" href="#">Мерч</a></li>
+                  <li class="price-menu__item"><a class="price-menu__link" href="#">Крафт</a></li>
+                  <li class="price-menu__item"><a class="price-menu__link" href="#">Анимации</a></li>
+                  <li class="price-menu__item"><a class="price-menu__link" href="#">Дизайн</a></li>
+                  <li class="price-menu__item"><a class="price-menu__link" href="#">Фотография</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#works">Работы</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#about">О студии</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <article>
-      <img src="images/1.jpg" alt="Продукт 1">
-    </article>
-    <section>
-      <h2>Главная страница проекта</h2>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем здесь будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
+    <section class="banner" id="works">
+      <div class="container">
+        <div class="banner__intro">
+          <p class="banner__eyebrow">Портфолио студии</p>
+          <h1 class="banner__heading">Лучшие работы</h1>
+        </div>
+
+        <!--
+          Баннер-представление на чистом CSS.
+          Слайды сменяют друг друга по таймеру (анимация banner-slide); наведение
+          на баннер ставит показ на паузу. Точки в правом верхнем углу — прямые
+          переключатели: щелчок «закрепляет» выбранную работу и останавливает
+          автопрокрутку. Переключатель «Авто» возвращает показ по таймеру.
+        -->
+        <div class="banner__stage">
+          <input class="banner__radio" type="radio" name="banner-slide" id="banner-auto" checked>
+          <input class="banner__radio" type="radio" name="banner-slide" id="banner-slide-1">
+          <input class="banner__radio" type="radio" name="banner-slide" id="banner-slide-2">
+          <input class="banner__radio" type="radio" name="banner-slide" id="banner-slide-3">
+
+          <ul class="banner__slides">
+            <li class="banner__slide">
+              <img class="banner__image" src="images/1.jpg" alt="Абстрактная картина: звёздный поток из синих и оранжевых волн">
+              <div class="banner__caption">
+                <p class="banner__caption-title">Арт-искусство</p>
+                <p class="banner__caption-text">Живопись и графика — серия «Звёздный поток».</p>
+              </div>
+            </li>
+
+            <li class="banner__slide">
+              <img class="banner__image" src="images/2.jpg" alt="Музыкант с гитарой в светящихся неоновых лучах">
+              <div class="banner__caption">
+                <p class="banner__caption-title">Анимации</p>
+                <p class="banner__caption-text">Световые эффекты и клипы — проект «Неоновый концерт».</p>
+              </div>
+            </li>
+
+            <li class="banner__slide">
+              <img class="banner__image" src="images/3.jpg" alt="Сюрреалистичный коллаж: дельфин и корова над морем">
+              <div class="banner__caption">
+                <p class="banner__caption-title">Фотография</p>
+                <p class="banner__caption-text">Фотоколлаж и ретушь — серия «Море и мечта».</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="banner__dots" role="group" aria-label="Переключение работ">
+            <label class="banner__dot" for="banner-slide-1">
+              <span class="visually-hidden">Показать работу «Звёздный поток»</span>
+            </label>
+            <label class="banner__dot" for="banner-slide-2">
+              <span class="visually-hidden">Показать работу «Неоновый концерт»</span>
+            </label>
+            <label class="banner__dot" for="banner-slide-3">
+              <span class="visually-hidden">Показать работу «Море и мечта»</span>
+            </label>
+            <span class="banner__dots-divider" aria-hidden="true"></span>
+            <label class="banner__autoplay" for="banner-auto">Авто</label>
+          </div>
+        </div>
+
+        <p class="banner__hint">
+          Автопрокрутка — раз в 4 секунды. Наведите курсор на изображение, чтобы
+          остановить показ; щелчок по точке закрепляет работу, «Авто» снова
+          включает прокрутку.
+        </p>
+      </div>
     </section>
-    <section>
-      <h2>О проекте</h2>
-      <p>
-        В рамках данного проекта будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг. Проект будет постепенно
-        расширяться на следующих практических занятиях.
-      </p>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__content">
+            <h2 class="about__title">О студии</h2>
+            <p class="about__text">
+              Творческая студия помогает оформить идею в готовый продукт: от эскиза
+              и живописной работы до мерча, анимации и съёмки. Мы работаем с частными
+              заказами и с небольшими брендами.
+            </p>
+            <p class="about__text">
+              Это стартовая страница учебного frontend-проекта: шапка с прайс-листом
+              и баннер с работами — первый блок будущего многостраничного каталога услуг.
+            </p>
+          </div>
+
+          <div class="about__aside">
+            <h2 class="about__title about__title--small">Направления</h2>
+            <ul class="about__list">
+              <li class="about__item">Арт-искусство</li>
+              <li class="about__item">Мерч</li>
+              <li class="about__item">Крафт</li>
+              <li class="about__item">Анимации</li>
+              <li class="about__item">Дизайн</li>
+              <li class="about__item">Фотография</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Контакты, Соцсети</p>
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия · контакты и соцсети</p>
+      <p class="site-footer__text">Учебный проект · Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
   </footer>
 </body>
 </html>

@@ -1,37 +1,680 @@
-* {
+/* ==========================================================================
+   Учебный проект «Творческая студия»
+   Стартовая страница: шапка с прайс-листом и баннер с работами студии.
+   ========================================================================== */
+
+/* 1. Переменные и минимальный сброс стилей -------------------------------- */
+
+:root {
+  --color-header: #0c0c8c;
+  --color-header-deep: #07075f;
+  --color-accent: #ffd166;
+  --color-bg: #7ad8cd;
+  --color-surface: #ffffff;
+  --color-ink: #10201f;
+  --color-muted: #4d5f5d;
+  --color-footer: #f2f2f2;
+  --radius-card: 20px;
+  --shadow-panel: 0 18px 40px rgba(7, 30, 28, 0.22);
+  --font-main: "Segoe UI", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 50 px;
-  border: 3 px;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-main);
   line-height: 1.5;
+  color: var(--color-ink);
+  background-color: var(--color-bg);
 }
 
-header,
-main,
-footer {
-  padding: 20px;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-header {
-  background-color: #0c0c8c;
+h1,
+h2,
+p {
+  margin: 0;
 }
+
+/* 2. Общий контейнер ------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 3. Шапка сайта ----------------------------------------------------------- */
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  padding: 14px 0;
+  color: #ffffff;
+  background-color: var(--color-header);
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo__image {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+}
+
+/* 4. Навигация ------------------------------------------------------------- */
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  display: inline-block;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #e9e9ff;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+/* 5. Плашка «Прайс-лист» и выпадающий список ------------------------------ */
+
+.price-menu {
+  position: relative;
+}
+
+.price-menu__toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 700;
+  color: var(--color-header-deep);
+  background-color: var(--color-accent);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-menu__toggle:hover,
+.price-menu__toggle:focus-visible {
+  background-color: #ffdc8a;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.price-menu__toggle:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.price-menu__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  min-width: 230px;
+  padding-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+/* Список раскрывается при наведении и при попадании фокуса внутрь плашки. */
+.price-menu:hover .price-menu__panel,
+.price-menu:focus-within .price-menu__panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.price-menu__list {
+  margin: 0;
+  padding: 8px;
+  color: var(--color-ink);
+  background-color: var(--color-surface);
+  border: 1px solid rgba(12, 12, 140, 0.08);
+  border-radius: 14px;
+  box-shadow: var(--shadow-panel);
+  list-style: none;
+}
+
+.price-menu__item + .price-menu__item {
+  margin-top: 2px;
+}
+
+.price-menu__link {
+  display: block;
+  padding: 9px 12px;
+  font-size: 15px;
+  color: #1c2a29;
+  text-decoration: none;
+  border-radius: 9px;
+  transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+}
+
+.price-menu__link:hover,
+.price-menu__link:focus-visible {
+  padding-left: 16px;
+  color: var(--color-header);
+  background-color: #eaf7f5;
+}
+
+/* 6. Основное содержимое --------------------------------------------------- */
 
 main {
-  background-color: #7ad8cd;
+  padding: 36px 0 56px;
+  background-color: var(--color-bg);
 }
 
-footer {
-  background-color: #f2f2f2;
+.banner__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
 }
 
-section {
-  margin-bottom: 24px;
+.banner__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #075e57;
 }
 
-section h2 {
-  margin-top: 0;
+.banner__heading {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+  color: #063e3a;
+}
+
+/* 7. Баннер-представление лучших работ ------------------------------------ */
+
+.banner__stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background-color: #073b37;
+  border-radius: var(--radius-card);
+  box-shadow: 0 24px 50px rgba(7, 59, 55, 0.28);
+  isolation: isolate;
+}
+
+/* Радиокнопки скрыты, но остаются доступны с клавиатуры. */
+.banner__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.banner__slides {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*
+  Слайды сменяют друг друга по таймеру: 12 секунд на цикл, 4 секунды на работу.
+  Анимация начинается с задержкой 0 / 4 / 8 секунд, поэтому кадры идут
+  друг за другом и на стыке плавно перекрываются.
+*/
+.banner__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: banner-slide 12s infinite;
+  transition: opacity 0.45s ease;
+}
+
+.banner__slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.banner__slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+/*
+  Наведение на само изображение останавливает автопрокрутку, чтобы работу было
+  удобно рассмотреть. На элементы управления (точки и «Авто») пауза не
+  распространяется — иначе кнопка «Авто» не вернула бы показ, пока курсор на ней.
+*/
+.banner__slides:hover .banner__slide {
+  animation-play-state: paused;
+}
+
+.banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes banner-slide {
+  0% {
+    opacity: 0;
+  }
+
+  3.33% {
+    opacity: 1;
+  }
+
+  33.33% {
+    opacity: 1;
+  }
+
+  37.5% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+  Выбранный щелчком слайд закрепляется, автопрокрутка останавливается.
+  Правила привязаны к конкретным радиокнопкам, поэтому положение «Авто»
+  (по умолчанию) возвращает анимацию.
+*/
+#banner-slide-1:checked ~ .banner__slides .banner__slide,
+#banner-slide-2:checked ~ .banner__slides .banner__slide,
+#banner-slide-3:checked ~ .banner__slides .banner__slide {
+  animation: none;
+  opacity: 0;
+}
+
+#banner-slide-1:checked ~ .banner__slides .banner__slide:nth-child(1),
+#banner-slide-2:checked ~ .banner__slides .banner__slide:nth-child(2),
+#banner-slide-3:checked ~ .banner__slides .banner__slide:nth-child(3) {
+  opacity: 1;
+}
+
+.banner__caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 28px;
+  color: #ffffff;
+  background: linear-gradient(to top, rgba(3, 22, 20, 0.9), rgba(3, 22, 20, 0.35) 55%, transparent);
+}
+
+.banner__caption-title {
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.banner__caption-text {
+  max-width: 46ch;
+  font-size: 15px;
+}
+
+.banner__hint {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #075e57;
+}
+
+/* 8. Точки переключения и режим «Авто» ------------------------------------ */
+
+.banner__dots {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background-color: rgba(4, 26, 24, 0.45);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.banner__dot {
+  display: block;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  animation: banner-dot 12s infinite;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.banner__dot:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.banner__dot:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.banner__dot:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+/* Точка подсвечивается синхронно с показом своего слайда. */
+@keyframes banner-dot {
+  0%,
+  33.33% {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: scale(1.15);
+  }
+
+  37.5%,
+  100% {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1);
+  }
+}
+
+.banner__slides:hover ~ .banner__dots .banner__dot {
+  animation-play-state: paused;
+}
+
+#banner-slide-1:checked ~ .banner__dots .banner__dot,
+#banner-slide-2:checked ~ .banner__dots .banner__dot,
+#banner-slide-3:checked ~ .banner__dots .banner__dot {
+  animation: none;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: none;
+}
+
+#banner-slide-1:checked ~ .banner__dots .banner__dot:nth-child(1),
+#banner-slide-2:checked ~ .banner__dots .banner__dot:nth-child(2),
+#banner-slide-3:checked ~ .banner__dots .banner__dot:nth-child(3) {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: scale(1.15);
+}
+
+#banner-slide-1:focus-visible ~ .banner__dots .banner__dot:nth-child(1),
+#banner-slide-2:focus-visible ~ .banner__dots .banner__dot:nth-child(2),
+#banner-slide-3:focus-visible ~ .banner__dots .banner__dot:nth-child(3),
+#banner-auto:focus-visible ~ .banner__dots .banner__autoplay {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.banner__dots-divider {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.banner__autoplay {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.banner__autoplay:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+#banner-auto:checked ~ .banner__dots .banner__autoplay {
+  color: #063e3a;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* 9. Раздел «О студии» ----------------------------------------------------- */
+
+.about {
+  padding-top: 44px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.about__content,
+.about__aside {
+  padding: 28px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: 0 12px 30px rgba(7, 59, 55, 0.12);
+}
+
+.about__title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #063e3a;
+}
+
+.about__title--small {
+  font-size: 18px;
+}
+
+.about__text {
+  color: var(--color-muted);
+}
+
+.about__text + .about__text {
+  margin-top: 10px;
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__item {
+  padding: 9px 12px;
+  font-size: 14px;
+  color: #0b4a45;
+  background-color: #eaf7f5;
+  border-left: 3px solid #17a398;
+  border-radius: 10px;
+}
+
+/* 10. Подвал --------------------------------------------------------------- */
+
+.site-footer {
+  padding: 24px 0;
+  background-color: var(--color-footer);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-footer__text {
+  font-size: 13px;
+  color: #5b6472;
+}
+
+/* 11. Вспомогательные классы ---------------------------------------------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 12. Адаптивность --------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .site-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav {
+    width: 100%;
+  }
+
+  .banner__stage {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header,
+  main {
+    padding-top: 20px;
+  }
+
+  .site-nav__list {
+    gap: 2px;
+  }
+
+  .site-nav__link {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .price-menu__toggle {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+
+  .banner__caption {
+    padding: 18px;
+  }
+
+  .banner__caption-text {
+    font-size: 13px;
+  }
+
+  .banner__dots {
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+    padding: 6px 8px;
+  }
+
+  .banner__dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .banner__hint {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .about__content,
+  .about__aside {
+    padding: 20px;
+  }
+
+  .about__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 13. Настройки для пользователей, которые отключают анимацию -------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .banner__slide,
+  .banner__dot {
+    animation: none;
+  }
+
+  .banner__slide {
+    transition: none;
+  }
+
+  /* Без анимации по умолчанию показывается первая работа. */
+  .banner__slide:first-child {
+    opacity: 1;
+  }
+
+  .banner__dot:first-child {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
 }
