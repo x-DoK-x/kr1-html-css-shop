@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 50 px;
+  border: 3 px;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -11,11 +17,11 @@ footer {
 }
 
 header {
-  background-color: #f2f2f2;
+  background-color: #0c0c8c;
 }
 
 main {
-  background-color: #ffffff;
+  background-color: #7ad8cd;
 }
 
 footer {
