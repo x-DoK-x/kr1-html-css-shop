@@ -9,38 +9,33 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-logo" href="index.html">
-        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
-      </a>
+    <!--
+      Синяя плашка с «Прайс-листом»: при наведении уезжает вверх и открывает
+      белое поле, где под заголовком появляется горизонтальный список разделов.
+    -->
+    <div class="price-menu">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
 
-      <nav class="site-nav" aria-label="Основная навигация">
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <!-- Плашка «Прайс-лист»: список ссылок раскрывается при наведении и при фокусе с клавиатуры -->
-            <div class="price-menu">
-              <button class="price-menu__toggle" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
-
-              <div class="price-menu__panel" id="price-menu-panel">
-                <ul class="price-menu__list">
-                  <li class="price-menu__item"><a class="price-menu__link" href="#">Арт-искусство</a></li>
-                  <li class="price-menu__item"><a class="price-menu__link" href="#">Мерч</a></li>
-                  <li class="price-menu__item"><a class="price-menu__link" href="#">Крафт</a></li>
-                  <li class="price-menu__item"><a class="price-menu__link" href="#">Анимации</a></li>
-                  <li class="price-menu__item"><a class="price-menu__link" href="#">Дизайн</a></li>
-                  <li class="price-menu__item"><a class="price-menu__link" href="#">Фотография</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#works">Работы</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#about">О студии</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="price-menu__panel" id="price-menu-panel">
+        <div class="price-menu__panel-inner">
+          <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="#">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="#">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="#">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="#">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="#">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="#">Фотография</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+    <a class="site-logo" href="index.html">
+      <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+      <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+    </a>
+
+    <div class="site-header__cover" aria-hidden="true"></div>
   </header>
 
   <main>

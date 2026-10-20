@@ -15,6 +15,7 @@
   --color-muted: #4d5f5d;
   --color-footer: #f2f2f2;
   --radius-card: 20px;
+  --header-bar: 78px;
   --shadow-panel: 0 18px 40px rgba(7, 30, 28, 0.22);
   --font-main: "Segoe UI", Arial, sans-serif;
 }
@@ -57,150 +58,176 @@ p {
 
 .site-header {
   position: relative;
-  z-index: 5;
-  padding: 14px 0;
-  color: #ffffff;
+  z-index: 20;
+  background-color: var(--color-surface);
+  box-shadow: 0 12px 30px rgba(7, 30, 28, 0.12);
+}
+
+/*
+  Синяя плашка-занавес: пока меню закрыто, закрывает верхнюю полосу шапки.
+  При наведении на «Прайс-лист» уезжает вверх и открывает белый фон.
+*/
+.site-header__cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  height: var(--header-bar);
   background-color: var(--color-header);
+  transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-header__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
+/* Логотип висит слева и остаётся на месте, когда плашка уезжает. */
 .site-logo {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
+  position: absolute;
+  top: calc(var(--header-bar) / 2);
+  left: 24px;
+  z-index: 3;
+  display: block;
+  width: 52px;
+  height: 52px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
 }
 
 .site-logo__image {
-  width: 56px;
-  height: 56px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
 }
 
-/* 4. Навигация ------------------------------------------------------------- */
-
-.site-nav__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* Инверсная версия логотипа лежит поверх обычной и проявляется при открытии. */
+.site-logo__image--inverse {
+  position: absolute;
+  inset: 0;
+  border-color: rgba(12, 12, 140, 0.14);
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
-.site-nav__link {
-  display: inline-block;
-  padding: 10px 12px;
-  font-size: 15px;
-  color: #e9e9ff;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+.price-menu:hover ~ .site-logo,
+.price-menu:focus-within ~ .site-logo {
+  transform: translateY(calc(-50% - 6px));
 }
 
-.site-nav__link:hover,
-.site-nav__link:focus-visible {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.14);
+/* Когда белое поле открыто, логотип показывается в инвертированном виде. */
+.price-menu:hover ~ .site-logo .site-logo__image--inverse,
+.price-menu:focus-within ~ .site-logo .site-logo__image--inverse,
+.site-logo:hover .site-logo__image--inverse {
+  opacity: 1;
 }
 
-/* 5. Плашка «Прайс-лист» и выпадающий список ------------------------------ */
+/* 4. Плашка «Прайс-лист» и горизонтальное меню ---------------------------- */
 
+/*
+  Плашка занимает всю ширину шапки: так курсор не «соскакивает» при переходе
+  от заголовка к ссылкам. Логотип лежит выше (z-index: 3), его наведение меню
+  не открывает.
+*/
 .price-menu {
   position: relative;
-}
-
-.price-menu__toggle {
-  display: inline-flex;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 10px 18px;
+  width: 100%;
+}
+
+.price-menu__title {
+  display: flex;
+  align-items: center;
+  height: var(--header-bar);
+  padding: 0 6px;
   font: inherit;
+  font-size: 21px;
   font-weight: 700;
-  color: var(--color-header-deep);
-  background-color: var(--color-accent);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: none;
   border: 0;
-  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  /* Цвет меняется с задержкой: текст остаётся белым, пока плашка не уедет. */
+  transition: color 0.1s ease 0.28s, transform 0.35s ease;
 }
 
-.price-menu__toggle:hover,
-.price-menu__toggle:focus-visible {
-  background-color: #ffdc8a;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+.price-menu__title:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
-.price-menu__toggle:focus-visible {
-  outline: 3px solid #ffffff;
-  outline-offset: 3px;
-}
-
+/*
+  Белое поле раскрывается прямо в потоке шапки, поэтому контент страницы
+  сдвигается вниз и не перекрывается списком.
+*/
 .price-menu__panel {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 20;
-  min-width: 230px;
-  padding-top: 10px;
+  display: grid;
+  grid-template-rows: 0fr;
+  width: 100%;
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
-  transform: translateY(-6px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  transition: grid-template-rows 0.35s ease, opacity 0.22s ease, visibility 0s linear 0.35s;
 }
 
-/* Список раскрывается при наведении и при попадании фокуса внутрь плашки. */
+.price-menu__panel-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Наведение или фокус: занавес уходит, заголовок поднимается, меню раскрывается. */
+.price-menu:hover .price-menu__title,
+.price-menu:focus-within .price-menu__title {
+  color: var(--color-header);
+  transform: translateY(-12px);
+}
+
 .price-menu:hover .price-menu__panel,
 .price-menu:focus-within .price-menu__panel {
+  grid-template-rows: 1fr;
   opacity: 1;
   visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
+  transition: grid-template-rows 0.35s ease, opacity 0.22s ease, visibility 0s;
+}
+
+.price-menu:hover ~ .site-header__cover,
+.price-menu:focus-within ~ .site-header__cover {
+  transform: translateY(-100%);
 }
 
 .price-menu__list {
-  margin: 0;
-  padding: 8px;
-  color: var(--color-ink);
-  background-color: var(--color-surface);
-  border: 1px solid rgba(12, 12, 140, 0.08);
-  border-radius: 14px;
-  box-shadow: var(--shadow-panel);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 34px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 26px 24px 30px;
   list-style: none;
 }
 
-.price-menu__item + .price-menu__item {
-  margin-top: 2px;
+.price-menu__item {
+  line-height: 1;
 }
 
 .price-menu__link {
-  display: block;
-  padding: 9px 12px;
+  display: inline-block;
+  padding: 8px 0;
   font-size: 15px;
+  font-weight: 600;
   color: #1c2a29;
   text-decoration: none;
-  border-radius: 9px;
-  transition: background-color 0.18s ease, color 0.18s ease, padding-left 0.18s ease;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .price-menu__link:hover,
 .price-menu__link:focus-visible {
-  padding-left: 16px;
   color: var(--color-header);
-  background-color: #eaf7f5;
+  border-bottom-color: var(--color-accent);
 }
 
 /* 6. Основное содержимое --------------------------------------------------- */
@@ -583,15 +610,6 @@ main {
 /* 12. Адаптивность --------------------------------------------------------- */
 
 @media (max-width: 860px) {
-  .site-header__inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .site-nav {
-    width: 100%;
-  }
-
   .banner__stage {
     aspect-ratio: 4 / 3;
   }
@@ -601,24 +619,34 @@ main {
   }
 }
 
+@media (max-width: 760px) {
+  :root {
+    --header-bar: 68px;
+  }
+
+  .site-logo {
+    left: 16px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .price-menu__title {
+    font-size: 18px;
+  }
+
+  .price-menu__list {
+    gap: 8px 22px;
+    padding: 20px 16px 24px;
+  }
+
+  .price-menu__link {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 560px) {
-  .site-header,
   main {
     padding-top: 20px;
-  }
-
-  .site-nav__list {
-    gap: 2px;
-  }
-
-  .site-nav__link {
-    padding: 8px 10px;
-    font-size: 14px;
-  }
-
-  .price-menu__toggle {
-    padding: 9px 14px;
-    font-size: 14px;
   }
 
   .banner__caption {
@@ -656,6 +684,30 @@ main {
   }
 }
 
+@media (max-width: 480px) {
+  :root {
+    --header-bar: 62px;
+  }
+
+  .site-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .price-menu__title {
+    font-size: 16px;
+  }
+
+  .price-menu__list {
+    gap: 6px 16px;
+    padding: 16px 14px 20px;
+  }
+
+  .price-menu__link {
+    font-size: 13px;
+  }
+}
+
 /* 13. Настройки для пользователей, которые отключают анимацию -------------- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -665,6 +717,12 @@ main {
   }
 
   .banner__slide {
+    transition: none;
+  }
+
+  .site-header__cover,
+  .price-menu__title,
+  .site-logo {
     transition: none;
   }
 
