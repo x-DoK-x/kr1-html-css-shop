@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Фотографии: индивидуальные, семейные, свадебные и съёмки животных.">
+  <title>Фотография — Творчество</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+  <div class="site-header__inner">
+    <div class="site-header__panel" id="price-menu-panel">
+        <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="photo.html" aria-current="page">Фотография</a></li>
+        </ul>
+    </div>
+
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
+
+  <div class="site-header__nav">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="catalog.html">Каталог</a>
+          <a class="site-nav__link" href="order.html">Заявка</a>
+          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
+          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
+      </nav>
+  </div>
+</header>
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <a class="crumbs__link" href="photo.html">Фотография</a></p>
+        <h1 class="page-title">Фотографии</h1>
+        <p class="page-lead">Каталог съёмок. Фильтр работает на CSS: выберите категорию.</p>
+        <div class="photo">
+          <input class="photo__radio" type="radio" name="photo-filter" id="photo-all" checked>
+          <input class="photo__radio" type="radio" name="photo-filter" id="photo-individual">
+          <input class="photo__radio" type="radio" name="photo-filter" id="photo-family">
+          <input class="photo__radio" type="radio" name="photo-filter" id="photo-wedding">
+          <input class="photo__radio" type="radio" name="photo-filter" id="photo-animals">
+
+          <div class="photo__filters" role="group" aria-label="Фильтр фотографий">
+            <label class="photo__chip" for="photo-all">Все</label>
+            <label class="photo__chip" for="photo-individual">Индивидуальное фото</label>
+            <label class="photo__chip" for="photo-family">Семейное</label>
+            <label class="photo__chip" for="photo-wedding">Свадьба</label>
+            <label class="photo__chip" for="photo-animals">Животные</label>
+          </div>
+
+          <div class="photo__grid">
+          <article class="photo-card photo-card--individual">
+            <img class="photo-card__image" src="images/Foto/photo-1.jpg" alt="Портрет с камерой">
+            <h3 class="photo-card__title">Портрет с камерой</h3>
+            <p class="photo-card__price">4 000 ₽</p>
+          </article>
+          <article class="photo-card photo-card--individual">
+            <img class="photo-card__image" src="images/Foto/photo-7.jpg" alt="Портрет с маками">
+            <h3 class="photo-card__title">Портрет с маками</h3>
+            <p class="photo-card__price">4 500 ₽</p>
+          </article>
+          <article class="photo-card photo-card--individual">
+            <img class="photo-card__image" src="images/Foto/photo-8.jpg" alt="Портрет с цветами">
+            <h3 class="photo-card__title">Портрет с цветами</h3>
+            <p class="photo-card__price">4 500 ₽</p>
+          </article>
+          <article class="photo-card photo-card--individual">
+            <img class="photo-card__image" src="images/Foto/photo-10.jpg" alt="Неоновый портрет">
+            <h3 class="photo-card__title">Неоновый портрет</h3>
+            <p class="photo-card__price">5 000 ₽</p>
+          </article>
+          <article class="photo-card photo-card--family">
+            <img class="photo-card__image" src="images/Foto/photo-5.jpg" alt="Семейная прогулка">
+            <h3 class="photo-card__title">Семейная прогулка</h3>
+            <p class="photo-card__price">6 000 ₽</p>
+          </article>
+          <article class="photo-card photo-card--family">
+            <img class="photo-card__image" src="images/Foto/photo-4.jpg" alt="Городская прогулка">
+            <h3 class="photo-card__title">Городская прогулка</h3>
+            <p class="photo-card__price">5 500 ₽</p>
+          </article>
+          <article class="photo-card photo-card--wedding">
+            <img class="photo-card__image" src="images/Foto/photo-9.jpg" alt="Свадьба «Силуэт»">
+            <h3 class="photo-card__title">Свадьба «Силуэт»</h3>
+            <p class="photo-card__price">25 000 ₽</p>
+          </article>
+          <article class="photo-card photo-card--wedding">
+            <img class="photo-card__image" src="images/placeholder/work-08.jpg" alt="Свадьба «Тёплый вечер»">
+            <h3 class="photo-card__title">Свадьба «Тёплый вечер»</h3>
+            <p class="photo-card__price">30 000 ₽</p>
+          </article>
+          <article class="photo-card photo-card--animals">
+            <img class="photo-card__image" src="images/Foto/photo-3.jpg" alt="Дельфин и корова">
+            <h3 class="photo-card__title">Дельфин и корова</h3>
+            <p class="photo-card__price">5 000 ₽</p>
+          </article>
+          <article class="photo-card photo-card--animals">
+            <img class="photo-card__image" src="images/placeholder/work-09.jpg" alt="Питомец">
+            <h3 class="photo-card__title">Питомец</h3>
+            <p class="photo-card__price">3 500 ₽</p>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="index.html">Главная</a>
+        <a class="site-footer__link" href="catalog.html">Каталог</a>
+        <a class="site-footer__link" href="order.html">Заявка</a>
+        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
+        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
+        <a class="site-footer__link" href="original.html">Оригиналы</a>
+      </nav>
+      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>

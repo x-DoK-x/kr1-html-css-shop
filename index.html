@@ -3,36 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог товаров</title>
+  <meta name="description" content="Творческая студия «Творчество»: арт-искусство, мерч, крафт, анимации, дизайн и фотография. Примеры работ, цены и заявка.">
+  <title>Каталог услуг «Творчество»</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Учебный интернет-магазин</h1>
-  </header>
+  <header class="site-header" id="top">
+  <div class="site-header__inner">
+    <div class="site-header__panel" id="price-menu-panel">
+        <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
+        </ul>
+    </div>
 
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
+
+  <div class="site-header__nav">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="catalog.html">Каталог</a>
+          <a class="site-nav__link" href="order.html">Заявка</a>
+          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
+          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
+      </nav>
+  </div>
+</header>
   <main>
-    <section>
-      <h2>Главная страница проекта</h2>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем здесь будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">«Творчество»</h1>
+          <p class="hero__text">Арт-искусство, мерч, крафт, анимации, дизайн и фотография. Здесь собраны примеры работ автора и прайс-лист услуг.</p>
+          <div class="hero__actions">
+            <a class="button" href="catalog.html">Смотреть каталог</a>
+            <a class="button button--ghost" href="order.html">Оставить заявку</a>
+          </div>
+        </div>
+        <img class="hero__image" src="images/Art/traditional-full.jpg" alt="Работа студии «Творчество»">
+      </div>
+      <div class="container hero__original">
+        <a class="link_orig" href="original.html">Купить оригинальные работы <span class="link_orig__arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="container">
+        <h2 class="section__title">Отвечаем за качество!</h2>
+        <ul class="advantages">
+
+          <li class="advantage">
+            <h3 class="advantage__title">Авторские работы</h3>
+            <p class="advantage__text">Каждая вещь делается вручную и не повторяется.</p>
+          </li>
+          <li class="advantage">
+            <h3 class="advantage__title">Прозрачные цены</h3>
+            <p class="advantage__text">Стоимость видна до начала работы.</p>
+            <p class="advantage__text--small">*не учитывая правки</p>
+          </li>
+          <li class="advantage">
+            <h3 class="advantage__title">Работа по брифу</h3>
+            <p class="advantage__text">Обсуждаем идею, сроки и правки.</p>
+          </li>
+          <li class="advantage">
+            <h3 class="advantage__title">Доставка по России</h3>
+            <p class="advantage__text">Отправляем бережно и с трек-номером.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="directions">
+      <div class="container">
+        <h2 class="section__title">Каталог</h2>
+        <p class="section__lead">Выберите направление — внутри примеры работ и цены.</p>
+        <div class="directions">
+
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/Art/traditional-full.jpg" alt="Арт-искусство">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Арт-искусство</h3>
+              <p class="direction__text">Живопись, графика и иллюстрация</p>
+              <a class="direction__link" href="art.html">Смотреть направление →</a>
+            </div>
+          </article>
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/Merch/breloki.jpg" alt="Мерч">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Мерч</h3>
+              <p class="direction__text">Брелоки, стикеры, типография, аксессуары</p>
+              <a class="direction__link" href="merch.html">Смотреть направление →</a>
+            </div>
+          </article>
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/Craft/craft-1.jpg" alt="Крафт">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Крафт</h3>
+              <p class="direction__text">Украшения и декор ручной работы</p>
+              <a class="direction__link" href="craft.html">Смотреть направление →</a>
+            </div>
+          </article>
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/Animation/anim-1.jpg" alt="Анимации">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Анимации</h3>
+              <p class="direction__text">Пиксельная анимация и клипы</p>
+              <a class="direction__link" href="animation.html">Смотреть направление →</a>
+            </div>
+          </article>
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/Design/web-1.jpg" alt="Дизайн">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Дизайн</h3>
+              <p class="direction__text">Веб, графика и моушен</p>
+              <a class="direction__link" href="design.html">Смотреть направление →</a>
+            </div>
+          </article>
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/Foto/photo-1.jpg" alt="Фотография">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Фотография</h3>
+              <p class="direction__text">Съёмка, ретушь и коллажи</p>
+              <a class="direction__link" href="photo.html">Смотреть направление →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about__content">
+          <h2 class="about__title">Об авторе</h2>
+          <p class="about__text">
+            Творческая страница автора, где собраны все примеры его работ и подробный прайс-лист услуг. Здесь вы можете ознакомиться с портфолио, узнать о направлениях деятельности и связаться с автором для заказа индивидуального проекта.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Учебный проект</p>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="index.html">Главная</a>
+        <a class="site-footer__link" href="catalog.html">Каталог</a>
+        <a class="site-footer__link" href="order.html">Заявка</a>
+        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
+        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
+        <a class="site-footer__link" href="original.html">Оригиналы</a>
+      </nav>
+      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
   </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
 </body>
 </html>
-
-<section>
-  <h2>О проекте</h2>
-  <p>
-    В рамках данного проекта будет разработан многостраничный сайт
-    интернет-магазина или каталога услуг. Проект будет постепенно
-    расширяться на следующих практических занятиях.
-  </p>
-</section>

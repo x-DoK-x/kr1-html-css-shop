@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Крафт: украшения и декор ручной работы, портфолио-коллаж и фильтры.">
+  <title>Крафт — Творчество</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+  <div class="site-header__inner">
+    <div class="site-header__panel" id="price-menu-panel">
+        <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="craft.html" aria-current="page">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
+        </ul>
+    </div>
+
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
+
+  <div class="site-header__nav">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="catalog.html">Каталог</a>
+          <a class="site-nav__link" href="order.html">Заявка</a>
+          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
+          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
+      </nav>
+  </div>
+</header>
+  <main>
+    <section class="section craft-page">
+      <div class="container">
+        <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <span class="crumbs__current">Крафт</span></p>
+        <h1 class="page-title">Крафт</h1>
+        <div class="craft-contacts">
+          <p class="craft-contacts__text">Связаться: <a class="craft-contacts__link" href="tel:+79991234567">+7 (999) 123-45-67</a> · <a class="craft-contacts__link" href="mailto:hello@tvorchestvo.ru">hello@tvorchestvo.ru</a> · <a class="craft-contacts__link" href="https://t.me/tvorchestvo">Telegram</a></p>
+        </div>
+
+        <div class="craft-filters">
+          <fieldset class="craft-filters__group">
+            <legend>Размер</legend>
+            <div class="filter-options">
+              <label class="filter-option"><input type="radio" name="craft-size" id="craft-size-all" checked><span>Любой</span></label>
+              <label class="filter-option"><input type="radio" name="craft-size" id="craft-size-s"><span>S</span></label>
+              <label class="filter-option"><input type="radio" name="craft-size" id="craft-size-m"><span>M</span></label>
+              <label class="filter-option"><input type="radio" name="craft-size" id="craft-size-l"><span>L</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="craft-filters__group">
+            <legend>Цена</legend>
+            <div class="filter-options">
+              <label class="filter-option"><input type="radio" name="craft-price" id="craft-price-all" checked><span>Любая</span></label>
+              <label class="filter-option"><input type="radio" name="craft-price" id="craft-price-low"><span>до 2 000 ₽</span></label>
+              <label class="filter-option"><input type="radio" name="craft-price" id="craft-price-mid"><span>2 000–25 000 ₽</span></label>
+              <label class="filter-option"><input type="radio" name="craft-price" id="craft-price-high"><span>от 25 000 ₽</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="craft-filters__group">
+            <legend>Материалы</legend>
+            <div class="filter-options">
+              <label class="filter-option"><input type="radio" name="craft-material" id="craft-material-all" checked><span>Любые</span></label>
+              <label class="filter-option"><input type="radio" name="craft-material" id="craft-material-low"><span>низкий</span></label>
+              <label class="filter-option"><input type="radio" name="craft-material" id="craft-material-medium"><span>средний</span></label>
+              <label class="filter-option"><input type="radio" name="craft-material" id="craft-material-high"><span>высокий</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="collage">
+          <figure class="collage__item collage__item--big craft-size-m craft-price-mid craft-material-medium">
+            <img class="collage__image" src="images/Craft/craft-1.jpg" alt="Серьги «Пион»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Серьги «Пион»</span>
+              <span class="collage__text">2 500 ₽ · средний материал</span>
+            </figcaption>
+          </figure>
+          <figure class="collage__item craft-size-s craft-price-low craft-material-low">
+            <img class="collage__image" src="images/Craft/craft-2.jpg" alt="Кольцо «Космос»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Кольцо «Космос»</span>
+              <span class="collage__text">1 800 ₽ · низкий материал</span>
+            </figcaption>
+          </figure>
+          <figure class="collage__item craft-size-m craft-price-mid craft-material-medium">
+            <img class="collage__image" src="images/Craft/craft-3.jpg" alt="Брошь «Кот»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Брошь «Кот»</span>
+              <span class="collage__text">4 200 ₽ · средний материал</span>
+            </figcaption>
+          </figure>
+          <figure class="collage__item collage__item--tall craft-size-l craft-price-mid craft-material-medium">
+            <img class="collage__image" src="images/Craft/craft-4.jpg" alt="Комплект «Сад»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Комплект «Сад»</span>
+              <span class="collage__text">12 000 ₽ · средний материал</span>
+            </figcaption>
+          </figure>
+          <figure class="collage__item craft-size-l craft-price-high craft-material-high">
+            <img class="collage__image" src="images/Craft/craft-5.jpg" alt="Арт-объект «Цветение»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Арт-объект «Цветение»</span>
+              <span class="collage__text">30 000 ₽ · высокий материал</span>
+            </figcaption>
+          </figure>
+          <figure class="collage__item craft-size-m craft-price-mid craft-material-medium">
+            <img class="collage__image" src="images/Craft/craft-6.jpg" alt="Подвеска «Луна»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Подвеска «Луна»</span>
+              <span class="collage__text">6 500 ₽ · средний материал</span>
+            </figcaption>
+          </figure>
+          <figure class="collage__item craft-size-s craft-price-low craft-material-low">
+            <img class="collage__image" src="images/Craft/craft-7.jpg" alt="Значок «Кот»">
+            <figcaption class="collage__caption">
+              <span class="collage__title">Значок «Кот»</span>
+              <span class="collage__text">900 ₽ · низкий материал</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="index.html">Главная</a>
+        <a class="site-footer__link" href="catalog.html">Каталог</a>
+        <a class="site-footer__link" href="order.html">Заявка</a>
+        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
+        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
+        <a class="site-footer__link" href="original.html">Оригиналы</a>
+      </nav>
+      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>

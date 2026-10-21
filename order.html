@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Форма заявки на работу: направление, бюджет, сроки и комментарий.">
+  <title>Оформление заявки — Творчество</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+  <div class="site-header__inner">
+    <div class="site-header__panel" id="price-menu-panel">
+        <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
+        </ul>
+    </div>
+
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
+
+  <div class="site-header__nav">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="catalog.html">Каталог</a>
+          <a class="site-nav__link" href="order.html" aria-current="page">Заявка</a>
+          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
+          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
+      </nav>
+  </div>
+</header>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="page-title">Оформление заявки</h1>
+        <p class="page-lead">Расскажите об идее — подберём направление и сроки.</p>
+        <div class="order">
+          <form class="form order__form" id="order-form" action="#" method="post">
+            <div class="form__grid">
+              <label class="field">
+                <span class="field__label">Имя</span>
+                <input class="field__control" type="text" name="name" placeholder="Как к вам обращаться" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Телефон</span>
+                <input class="field__control" type="tel" name="phone" placeholder="+7 (999) 000-00-00" pattern="\+?[0-9\s\-()]{10,18}" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__control" type="email" name="email" placeholder="you@example.ru" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Направление</span>
+                <select class="field__control" name="direction" required>
+                  <option value="">Выберите направление</option>
+                  <option>Арт-искусство</option>
+                  <option>Мерч</option>
+                  <option>Крафт</option>
+                  <option>Анимации</option>
+                  <option>Дизайн</option>
+                  <option>Фотография</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field__label">Бюджет</span>
+                <select class="field__control" name="budget">
+                  <option>до 5 000 ₽</option>
+                  <option>5 000–15 000 ₽</option>
+                  <option>15 000–30 000 ₽</option>
+                  <option>от 30 000 ₽</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field__label">Срок</span>
+                <select class="field__control" name="deadline">
+                  <option>не срочно</option>
+                  <option>в течение месяца</option>
+                  <option>в течение недели</option>
+                </select>
+              </label>
+              <label class="field field--full">
+                <span class="field__label">Комментарий</span>
+                <textarea class="field__control" name="message" rows="5" placeholder="Опишите идею, размеры, референсы"></textarea>
+              </label>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required>
+              <span>Согласен с обработкой персональных данных</span>
+            </label>
+            <button class="button" type="submit">Отправить заявку</button>
+            <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+          </form>
+
+          <aside class="order__aside">
+            <h2 class="order__title">Как проходит заказ</h2>
+            <ol class="steps">
+              <li>Обсуждаем идею, референсы и сроки.</li>
+              <li>Согласуем эскиз и стоимость.</li>
+              <li>Делаем работу и показываем промежуточный результат.</li>
+              <li>Вносим правки и передаём готовую работу.</li>
+            </ol>
+            <p class="order__contacts">Вопросы: <a class="link" href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+          </aside>
+        </div>
+
+        <section class="order__example">
+          <img class="order__example-image" src="images/Art/traditional-full.jpg" alt="Пример оформления идеи">
+          <div class="order__example-body">
+            <h2 class="order__example-title">Пример оформления идеи</h2>
+            <p class="order__example-text">Так можно описать задумку — этого достаточно, чтобы мы поняли задачу.</p>
+            <ul class="order__example-list">
+              <li><span>Направление</span> Арт-искусство</li>
+              <li><span>Идея</span> Портрет с цветами, тёплые оттенки</li>
+              <li><span>Формат</span> 40 × 50 см, цифровая графика</li>
+              <li><span>Референсы</span> Фото с маками, мягкий свет</li>
+              <li><span>Бюджет</span> до 10 000 ₽</li>
+              <li><span>Срок</span> 2 недели</li>
+            </ul>
+            <a class="button button--small" href="#order-form">Заполнить по образцу</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="index.html">Главная</a>
+        <a class="site-footer__link" href="catalog.html">Каталог</a>
+        <a class="site-footer__link" href="order.html">Заявка</a>
+        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
+        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
+        <a class="site-footer__link" href="original.html">Оригиналы</a>
+      </nav>
+      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>

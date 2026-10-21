@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Брелок «Космическая корова»: описание, характеристики, цена и быстрый заказ.">
+  <title>Брелок «Космическая корова» — Творчество</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+  <div class="site-header__inner">
+    <div class="site-header__panel" id="price-menu-panel">
+        <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
+        </ul>
+    </div>
+
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
+
+  <div class="site-header__nav">
+      <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="catalog.html" aria-current="page">Каталог</a>
+          <a class="site-nav__link" href="order.html">Заявка</a>
+          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
+          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
+      </nav>
+  </div>
+</header>
+  <main>
+    <section class="section" id="product">
+      <div class="container">
+        <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <a class="crumbs__link" href="catalog.html">Каталог</a> / <span class="crumbs__current">Брелок «Космическая корова»</span></p>
+        <div class="product">
+          <div class="product__media">
+            <img class="product__image" src="images/Merch/breloki.jpg" alt="Брелок «Космическая корова»">
+          </div>
+          <div class="product__info">
+            <h1 class="page-title">Брелок «Космическая корова»</h1>
+            <p class="product__price">900 ₽</p>
+            <p class="product__text">Акриловый брелок с авторским принтом. Фиолетовый корпус, светящиеся вставки и крепление-карабин. Подойдёт как маленький подарок или аксессуар для сумки.</p>
+            <div class="product__actions">
+              <a class="button" href="order.html">Оформить заявку</a>
+              <a class="button button--ghost" href="#quick-order">Быстрый заказ</a>
+            </div>
+            <table class="specs">
+              <caption>Характеристики</caption>
+              <tbody>
+                <tr><th scope="row">Материал</th><td>акрил, металл</td></tr>
+                <tr><th scope="row">Размер</th><td>6 × 8 см</td></tr>
+                <tr><th scope="row">Цвет</th><td>фиолетовый, зелёный</td></tr>
+                <tr><th scope="row">Срок изготовления</th><td>3–5 дней</td></tr>
+                <tr><th scope="row">Крепление</th><td>карабин</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="modal" id="quick-order" role="dialog" aria-modal="true" aria-labelledby="quick-order-title">
+          <div class="modal__dialog">
+            <a class="modal__close" href="#product" aria-label="Закрыть окно">×</a>
+            <h2 class="modal__title" id="quick-order-title">Быстрый заказ</h2>
+            <p class="modal__text">Оставьте имя и телефон — свяжемся, чтобы подтвердить заказ.</p>
+            <form class="form" action="#" method="post">
+              <label class="field">
+                <span class="field__label">Имя</span>
+                <input class="field__control" type="text" name="name" placeholder="Как к вам обращаться" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Телефон</span>
+                <input class="field__control" type="tel" name="phone" placeholder="+7 (999) 000-00-00" pattern="\+?[0-9\s\-()]{10,18}" required>
+              </label>
+              <button class="button" type="submit">Отправить</button>
+              <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="index.html">Главная</a>
+        <a class="site-footer__link" href="catalog.html">Каталог</a>
+        <a class="site-footer__link" href="order.html">Заявка</a>
+        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
+        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
+        <a class="site-footer__link" href="original.html">Оригиналы</a>
+      </nav>
+      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>
