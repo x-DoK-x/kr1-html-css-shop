@@ -9,8 +9,8 @@
 </head>
 <body>
   <header class="site-header" id="top">
-    <div class="site-header__inner">
-      <div class="site-header__panel" id="price-menu-panel">
+  <div class="site-header__inner">
+    <div class="site-header__panel" id="price-menu-panel">
         <ul class="price-menu__list">
             <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
@@ -19,25 +19,27 @@
             <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
         </ul>
-        <nav class="site-nav" aria-label="Навигация по сайту">
-            <a class="site-nav__link" href="index.html">Главная</a>
-            <a class="site-nav__link" href="catalog.html">Каталог</a>
-            <a class="site-nav__link" href="order.html">Заявка</a>
-            <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
-            <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
-        </nav>
-      </div>
+    </div>
 
-      <div class="site-header__cover">
-        <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
-      </div>
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
 
+  <div class="site-header__nav">
       <a class="site-logo" href="index.html">
         <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
         <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
       </a>
-    </div>
-  </header>
+      <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="catalog.html">Каталог</a>
+          <a class="site-nav__link" href="order.html">Заявка</a>
+          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
+          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
+      </nav>
+  </div>
+</header>
   <main>
     <section class="hero">
       <div class="container hero__inner">
@@ -58,7 +60,7 @@
 
     <section class="section" id="advantages">
       <div class="container">
-        <h2 class="section__title">Почему у нас</h2>
+        <h2 class="section__title">Отвечаем за качество!</h2>
         <ul class="advantages">
 
           <li class="advantage">
@@ -68,6 +70,7 @@
           <li class="advantage">
             <h3 class="advantage__title">Прозрачные цены</h3>
             <p class="advantage__text">Стоимость видна до начала работы.</p>
+            <p class="advantage__text--small">*не учитывая правки</p>
           </li>
           <li class="advantage">
             <h3 class="advantage__title">Работа по брифу</h3>
@@ -78,69 +81,6 @@
             <p class="advantage__text">Отправляем бережно и с трек-номером.</p>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <section class="section" id="works">
-      <div class="container">
-        <h2 class="section__title">Популярные работы</h2>
-        <div class="works">
-
-          <article class="work-card">
-            <a class="work-card__link" href="art.html">
-              <img class="work-card__image" src="images/Art/traditional-full.jpg" alt="Арт-искусство">
-            </a>
-            <div class="work-card__body">
-              <h3 class="work-card__title"><a class="work-card__title-link" href="art.html">Арт-искусство</a></h3>
-              <p class="work-card__text">Живопись, графика и иллюстрация</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <a class="work-card__link" href="merch.html">
-              <img class="work-card__image" src="images/Merch/breloki.jpg" alt="Мерч">
-            </a>
-            <div class="work-card__body">
-              <h3 class="work-card__title"><a class="work-card__title-link" href="merch.html">Мерч</a></h3>
-              <p class="work-card__text">Брелоки, стикеры, типография, аксессуары</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <a class="work-card__link" href="craft.html">
-              <img class="work-card__image" src="images/Craft/craft-1.jpg" alt="Крафт">
-            </a>
-            <div class="work-card__body">
-              <h3 class="work-card__title"><a class="work-card__title-link" href="craft.html">Крафт</a></h3>
-              <p class="work-card__text">Украшения и декор ручной работы</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <a class="work-card__link" href="animation.html">
-              <img class="work-card__image" src="images/Animation/anim-1.jpg" alt="Анимации">
-            </a>
-            <div class="work-card__body">
-              <h3 class="work-card__title"><a class="work-card__title-link" href="animation.html">Анимации</a></h3>
-              <p class="work-card__text">Пиксельная анимация и клипы</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <a class="work-card__link" href="design.html">
-              <img class="work-card__image" src="images/Design/web-1.jpg" alt="Дизайн">
-            </a>
-            <div class="work-card__body">
-              <h3 class="work-card__title"><a class="work-card__title-link" href="design.html">Дизайн</a></h3>
-              <p class="work-card__text">Веб, графика и моушен</p>
-            </div>
-          </article>
-          <article class="work-card">
-            <a class="work-card__link" href="photo.html">
-              <img class="work-card__image" src="images/Foto/photo-1.jpg" alt="Фотография">
-            </a>
-            <div class="work-card__body">
-              <h3 class="work-card__title"><a class="work-card__title-link" href="photo.html">Фотография</a></h3>
-              <p class="work-card__text">Съёмка, ретушь и коллажи</p>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
 
