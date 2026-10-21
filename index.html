@@ -4,15 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Творческая студия: арт-искусство, мерч, крафт, анимации, дизайн и фотография. Портфолио лучших работ и прайс-лист услуг студии.">
-  <title>Творческая студия — прайс-лист и портфолио</title>
+  <title>Каталог услуг "Творчество"</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
-    <!--
-      Синяя плашка с «Прайс-листом»: при наведении уезжает вверх и открывает
-      белое поле, где под заголовком появляется горизонтальный список разделов.
-    -->
     <div class="price-menu">
       <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
 
@@ -39,102 +35,137 @@
   </header>
 
   <main>
-    <section class="banner" id="works">
+    <section class="showcase" id="works">
       <div class="container">
-        <div class="banner__intro">
-          <p class="banner__eyebrow">Портфолио студии</p>
-          <h1 class="banner__heading">Лучшие работы</h1>
-        </div>
+        <div class="carousel" data-carousel>
+          <div class="carousel__stage">
+            <ul class="carousel__slides">
+              <li class="carousel__slide is-current">
+                <a class="carousel__link" href="#" data-title="Арт-искусство" data-text="Живопись, графика и иллюстрация — авторские серии работ." aria-label="Работа «Арт-искусство»">
+                  <img class="carousel__image" src="images/main/art.jpg" alt="Иллюстрация: зелёная кошка и маленькие человечки на оранжевом фоне">
+                </a>
+              </li>
 
-        <!--
-          Баннер-представление на чистом CSS.
-          Слайды сменяют друг друга по таймеру (анимация banner-slide); наведение
-          на баннер ставит показ на паузу. Точки в правом верхнем углу — прямые
-          переключатели: щелчок «закрепляет» выбранную работу и останавливает
-          автопрокрутку. Переключатель «Авто» возвращает показ по таймеру.
-        -->
-        <div class="banner__stage">
-          <input class="banner__radio" type="radio" name="banner-slide" id="banner-auto" checked>
-          <input class="banner__radio" type="radio" name="banner-slide" id="banner-slide-1">
-          <input class="banner__radio" type="radio" name="banner-slide" id="banner-slide-2">
-          <input class="banner__radio" type="radio" name="banner-slide" id="banner-slide-3">
+              <li class="carousel__slide">
+                <a class="carousel__link" href="#" data-title="Мерч" data-text="Значки, брелоки и аксессуары с авторскими принтами." aria-label="Работа «Мерч»">
+                  <img class="carousel__image" src="images/main/merch.jpg" alt="Акриловые брелоки с зелёными и фиолетовыми вставками">
+                </a>
+              </li>
 
-          <ul class="banner__slides">
-            <li class="banner__slide">
-              <img class="banner__image" src="images/1.jpg" alt="Абстрактная картина: звёздный поток из синих и оранжевых волн">
-              <div class="banner__caption">
-                <p class="banner__caption-title">Арт-искусство</p>
-                <p class="banner__caption-text">Живопись и графика — серия «Звёздный поток».</p>
-              </div>
-            </li>
+              <li class="carousel__slide">
+                <a class="carousel__link" href="#" data-title="Крафт" data-text="Украшения и декор ручной работы из полимерной глины." aria-label="Работа «Крафт»">
+                  <img class="carousel__image" src="images/main/craft.jpg" alt="Украшения-цветы из полимерной глины на джинсах">
+                </a>
+              </li>
 
-            <li class="banner__slide">
-              <img class="banner__image" src="images/2.jpg" alt="Музыкант с гитарой в светящихся неоновых лучах">
-              <div class="banner__caption">
-                <p class="banner__caption-title">Анимации</p>
-                <p class="banner__caption-text">Световые эффекты и клипы — проект «Неоновый концерт».</p>
-              </div>
-            </li>
+              <li class="carousel__slide">
+                <a class="carousel__link" href="#" data-title="Анимации" data-text="Пиксельная анимация, клипы и заставки." aria-label="Работа «Анимации»">
+                  <img class="carousel__image" src="images/main/animation.jpg" alt="Пиксельная анимация на экране телефона Nokia">
+                </a>
+              </li>
 
-            <li class="banner__slide">
-              <img class="banner__image" src="images/3.jpg" alt="Сюрреалистичный коллаж: дельфин и корова над морем">
-              <div class="banner__caption">
-                <p class="banner__caption-title">Фотография</p>
-                <p class="banner__caption-text">Фотоколлаж и ретушь — серия «Море и мечта».</p>
-              </div>
-            </li>
-          </ul>
+              <li class="carousel__slide">
+                <a class="carousel__link" href="#" data-title="Дизайн" data-text="Плакаты, обложки, айдентика и вёрстка." aria-label="Работа «Дизайн»">
+                  <img class="carousel__image" src="images/main/design.jpg" alt="Плакат в стиле ретро-футуризма с надписью Space">
+                </a>
+              </li>
 
-          <div class="banner__dots" role="group" aria-label="Переключение работ">
-            <label class="banner__dot" for="banner-slide-1">
-              <span class="visually-hidden">Показать работу «Звёздный поток»</span>
-            </label>
-            <label class="banner__dot" for="banner-slide-2">
-              <span class="visually-hidden">Показать работу «Неоновый концерт»</span>
-            </label>
-            <label class="banner__dot" for="banner-slide-3">
-              <span class="visually-hidden">Показать работу «Море и мечта»</span>
-            </label>
-            <span class="banner__dots-divider" aria-hidden="true"></span>
-            <label class="banner__autoplay" for="banner-auto">Авто</label>
+              <li class="carousel__slide">
+                <a class="carousel__link" href="#" data-title="Фотография" data-text="Съёмка, ретушь и фотоколлажи." aria-label="Работа «Фотография»">
+                  <img class="carousel__image" src="images/main/foto.jpg" alt="Девушка на роликах в сценическом костюме под светом софитов">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="carousel__caption" aria-live="polite">
+            <p class="carousel__caption-title">Арт-искусство</p>
+            <p class="carousel__caption-text">Живопись, графика и иллюстрация — авторские серии работ.</p>
           </div>
         </div>
 
-        <p class="banner__hint">
-          Автопрокрутка — раз в 4 секунды. Наведите курсор на изображение, чтобы
-          остановить показ; щелчок по точке закрепляет работу, «Авто» снова
-          включает прокрутку.
-        </p>
+        <div class="showcase__intro">
+          <p class="showcase__eyebrow">Портфолио студии</p>
+          <h1 class="showcase__title">Лучшие примеры работ</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="directions" id="directions">
+      <div class="container">
+        <h2 class="directions__title">Направления</h2>
+
+        <div class="directions__list">
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/main/art.jpg" alt="Арт-искусство">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Арт-искусство</h3>
+              <p class="direction__text">Живопись, графика и иллюстрации на заказ.</p>
+            </div>
+          </article>
+
+          <article class="direction">
+            <div class="direction__media">
+              <img class="direction__image" src="images/main/merch.jpg" alt="Мерч">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Мерч</h3>
+              <p class="direction__text">Значки, брелоки и аксессуары с авторскими принтами.</p>
+            </div>
+          </article>
+
+          <article class="direction direction--reverse">
+            <div class="direction__media">
+              <img class="direction__image" src="images/main/craft.jpg" alt="Крафт">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Крафт</h3>
+              <p class="direction__text">Украшения и декор ручной работы.</p>
+            </div>
+          </article>
+
+          <article class="direction direction--reverse">
+            <div class="direction__media">
+              <img class="direction__image" src="images/main/animation.jpg" alt="Анимации">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Анимации</h3>
+              <p class="direction__text">Пиксельная анимация, клипы и заставки.</p>
+            </div>
+          </article>
+
+          <article class="direction direction--reverse">
+            <div class="direction__media">
+              <img class="direction__image" src="images/main/design.jpg" alt="Дизайн">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Дизайн</h3>
+              <p class="direction__text">Плакаты, обложки, айдентика и вёрстка.</p>
+            </div>
+          </article>
+
+          <article class="direction direction--reverse">
+            <div class="direction__media">
+              <img class="direction__image" src="images/main/foto.jpg" alt="Фотография">
+            </div>
+            <div class="direction__body">
+              <h3 class="direction__title">Фотография</h3>
+              <p class="direction__text">Съёмка, ретушь и фотоколлажи.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="about" id="about">
       <div class="container">
-        <div class="about__grid">
-          <div class="about__content">
-            <h2 class="about__title">О студии</h2>
-            <p class="about__text">
-              Творческая студия помогает оформить идею в готовый продукт: от эскиза
-              и живописной работы до мерча, анимации и съёмки. Мы работаем с частными
-              заказами и с небольшими брендами.
-            </p>
-            <p class="about__text">
-              Это стартовая страница учебного frontend-проекта: шапка с прайс-листом
-              и баннер с работами — первый блок будущего многостраничного каталога услуг.
-            </p>
-          </div>
-
-          <div class="about__aside">
-            <h2 class="about__title about__title--small">Направления</h2>
-            <ul class="about__list">
-              <li class="about__item">Арт-искусство</li>
-              <li class="about__item">Мерч</li>
-              <li class="about__item">Крафт</li>
-              <li class="about__item">Анимации</li>
-              <li class="about__item">Дизайн</li>
-              <li class="about__item">Фотография</li>
-            </ul>
-          </div>
+        <div class="about__content">
+          <h2 class="about__title">Об авторе</h2>
+          <p class="about__text">
+            Творческая страница автора, где собраны все примеры его работ и подробный прайс-лист услуг. Здесь вы можете ознакомиться с портфолио, узнать о направлениях деятельности и связаться с автором для заказа индивидуального проекта.
+          </p>
         </div>
       </div>
     </section>
@@ -142,9 +173,10 @@
 
   <footer class="site-footer" id="contacts">
     <div class="site-footer__inner">
-      <p class="site-footer__text">Творческая студия · контакты и соцсети</p>
+      <p class="site-footer__text">Творческая страница автора · контакты и соцсети</p>
       <p class="site-footer__text">Учебный проект · Широбокова Д. Д., ЭФБО-16-25</p>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
