@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты творческой студии «Творчество» и форма обратной связи.">
+  <title>Контакты — Творчество</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="price-menu">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+      <div class="price-menu__panel" id="price-menu-panel">
+        <div class="price-menu__panel-inner">
+          <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
+          </ul>
+          <nav class="site-nav" aria-label="Навигация по сайту">
+            <a class="site-nav__link" href="index.html">Главная</a>
+            <a class="site-nav__link" href="catalog.html">Каталог</a>
+            <a class="site-nav__link" href="order.html">Заявка</a>
+            <a class="site-nav__link" href="contacts.html#social" aria-current="page">Соцсети</a>
+            <a class="site-nav__link" href="contacts.html#support" aria-current="page">Тех.поддержка</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <a class="site-logo" href="index.html">
+      <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+      <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+    </a>
+
+    <div class="site-header__cover" aria-hidden="true"></div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="page-title">Контакты</h1>
+        <p class="page-lead">Напишите удобным способом — отвечаем в течение дня.</p>
+        <div class="contacts">
+          <div class="contacts__info">
+            <div class="contacts__card">
+              <h2 class="contacts__title">Телефон</h2>
+              <a class="contacts__link" href="tel:+79991234567">+7 (999) 123-45-67</a>
+            </div>
+            <div class="contacts__card">
+              <h2 class="contacts__title">Почта</h2>
+              <a class="contacts__link" href="mailto:hello@tvorchestvo.ru">hello@tvorchestvo.ru</a>
+            </div>
+            <div class="contacts__card">
+              <h2 class="contacts__title">Telegram</h2>
+              <a class="contacts__link" href="https://t.me/tvorchestvo">@tvorchestvo</a>
+            </div>
+            <div class="contacts__card">
+              <h2 class="contacts__title">Адрес</h2>
+              <p class="contacts__text">Москва, ул. Творческая, 12</p>
+            </div>
+          </div>
+
+          <form class="form contacts__form" action="#" method="post">
+            <h2 class="contacts__form-title">Написать нам</h2>
+            <div class="form__grid">
+              <label class="field">
+                <span class="field__label">Имя</span>
+                <input class="field__control" type="text" name="name" placeholder="Как к вам обращаться" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__control" type="email" name="email" placeholder="you@example.ru" required>
+              </label>
+              <label class="field field--full">
+                <span class="field__label">Сообщение</span>
+                <textarea class="field__control" name="message" rows="5" placeholder="Чем можем помочь?" required></textarea>
+              </label>
+            </div>
+            <button class="button" type="submit">Отправить</button>
+            <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+          </form>
+        </div>
+
+        <div class="contacts__extra">
+          <section class="contacts__section" id="social">
+            <h2 class="contacts__section-title">Соцсети</h2>
+            <ul class="contacts__social">
+              <li><a class="contacts__social-link" href="https://t.me/tvorchestvo">Telegram</a></li>
+              <li><a class="contacts__social-link" href="https://vk.com/">ВКонтакте</a></li>
+              <li><a class="contacts__social-link" href="https://pinterest.com/">Pinterest</a></li>
+            </ul>
+          </section>
+          <section class="contacts__section" id="support">
+            <h2 class="contacts__section-title">Тех. поддержка</h2>
+            <p class="contacts__text">Если сайт или форма работают некорректно, напишите на <a class="link" href="mailto:support@tvorchestvo.ru">support@tvorchestvo.ru</a>.</p>
+            <p class="contacts__text">Отвечаем в течение рабочего дня.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="index.html">Главная</a>
+        <a class="site-footer__link" href="catalog.html">Каталог</a>
+        <a class="site-footer__link" href="order.html">Заявка</a>
+        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
+        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
+        <a class="site-footer__link" href="original.html">Оригиналы</a>
+      </nav>
+      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>
