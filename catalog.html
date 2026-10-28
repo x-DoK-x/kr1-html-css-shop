@@ -4,48 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Каталог мерча: брелоки, стикеры, типография и аксессуары. Фильтры по цене, размеру и цвету.">
-  <title>Каталог — Творчество</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <title>Каталог услуг — Творчество</title>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
   <header class="site-header" id="top">
   <div class="site-header__inner">
-    <div class="site-header__panel" id="price-menu-panel">
-        <ul class="price-menu__list">
+    <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <div class="site-header__panel" id="price-menu-panel">
+      <ul class="price-menu__list">
             <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
-        </ul>
+      </ul>
     </div>
-
     <div class="site-header__cover">
       <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
     </div>
   </div>
-
   <div class="site-header__nav">
-      <a class="site-logo" href="index.html">
-        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
-        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
-      </a>
-      <nav class="site-nav" aria-label="Навигация по сайту">
+    <nav class="site-nav" aria-label="Навигация по сайту">
           <a class="site-nav__link" href="index.html">Главная</a>
-          <a class="site-nav__link" href="catalog.html" aria-current="page">Каталог</a>
-          <a class="site-nav__link" href="order.html">Заявка</a>
-          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
-          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
-      </nav>
+          <a class="site-nav__link" href="catalog.html" aria-current="page">Каталог услуг</a>
+          <a class="site-nav__link" href="order.html">Заказ</a>
+          <a class="site-nav__link" href="original.html">Ориджин</a>
+          <a class="site-nav__link" href="contacts.html">Соцсети</a>
+    </nav>
   </div>
 </header>
-  <main>
+  <main id="main">
     <section class="section catalog-page">
       <div class="container">
-        <h1 class="page-title">Каталог</h1>
-        <p class="page-lead">Сначала выберите, из каких каталогов брать товары. Отметьте нужные и нажмите «Подтвердить» — фильтры появятся на следующем шаге.</p>
-
+        <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <span class="crumbs__current">Каталог услуг</span></p>
+        <h1 class="page-title">Каталог услуг</h1>
+        <p class="page-lead">Товары разложены по каталогам. Слева можно сузить список: каталог, цена, размер и цвет.</p>
         <div class="catalog-flow">
           <input class="catalog-choice__check" type="checkbox" id="cat-art" checked>
           <input class="catalog-choice__check" type="checkbox" id="cat-photo" checked>
@@ -53,215 +50,340 @@
           <input class="catalog-choice__check" type="checkbox" id="cat-merch" checked>
           <input class="catalog-choice__check" type="checkbox" id="cat-craft" checked>
           <input class="catalog-choice__check" type="checkbox" id="cat-animation" checked>
-
-          <input class="catalog-flow__step" type="radio" name="catalog-step" id="catalog-select" checked>
-          <input class="catalog-flow__step" type="radio" name="catalog-step" id="catalog-result">
+          <input class="catalog-flow__step" type="radio" name="catalog-step" id="catalog-select">
+          <input class="catalog-flow__step" type="radio" name="catalog-step" id="catalog-result" checked>
 
           <section class="catalog-choice">
-            <h2 class="catalog-choice__title">Из каких каталогов брать товары</h2>
-            <div class="catalog-choice__grid">            <label class="catalog-choice__card" for="cat-art">
-              <img class="catalog-choice__image" src="images/Art/traditional-full.jpg" alt="Арт-искусство">
-              <span class="catalog-choice__name">Арт-искусство</span>
-              <span class="catalog-choice__mark" aria-hidden="true"></span>
-            </label>            <label class="catalog-choice__card" for="cat-photo">
-              <img class="catalog-choice__image" src="images/Foto/photo-1.jpg" alt="Фото">
-              <span class="catalog-choice__name">Фото</span>
-              <span class="catalog-choice__mark" aria-hidden="true"></span>
-            </label>            <label class="catalog-choice__card" for="cat-design">
-              <img class="catalog-choice__image" src="images/Design/web-1.jpg" alt="Дизайн">
-              <span class="catalog-choice__name">Дизайн</span>
-              <span class="catalog-choice__mark" aria-hidden="true"></span>
-            </label>            <label class="catalog-choice__card" for="cat-merch">
-              <img class="catalog-choice__image" src="images/Merch/breloki.jpg" alt="Мерч">
-              <span class="catalog-choice__name">Мерч</span>
-              <span class="catalog-choice__mark" aria-hidden="true"></span>
-            </label>            <label class="catalog-choice__card" for="cat-craft">
-              <img class="catalog-choice__image" src="images/Craft/craft-1.jpg" alt="Крафт">
-              <span class="catalog-choice__name">Крафт</span>
-              <span class="catalog-choice__mark" aria-hidden="true"></span>
-            </label>            <label class="catalog-choice__card" for="cat-animation">
-              <img class="catalog-choice__image" src="images/Animation/anim-1.jpg" alt="Анимации">
-              <span class="catalog-choice__name">Анимации</span>
-              <span class="catalog-choice__mark" aria-hidden="true"></span>
-            </label>
+            <div class="catalog-choice__head">
+              <h2 class="catalog-choice__title">Из каких каталогов брать товары</h2>
+              <div class="catalog-choice__actions">
+                <label class="button catalog-choice__submit" for="catalog-result">Подтвердить</label>
+                <label class="button button--ghost" for="catalog-result">Пропустить</label>
+              </div>
             </div>
-            <div class="catalog-choice__actions">
-              <label class="button catalog-choice__submit" for="catalog-result">Подтвердить</label>
-              <p class="catalog-choice__note">Можно выбрать несколько каталогов.</p>
+            <p class="catalog-choice__note">Можно выбрать несколько каталогов.</p>
+            <div class="catalog-choice__grid">
+              <label class="catalog-choice__card" for="cat-art"><img class="catalog-choice__image" src="images/Art/traditional-full.jpg" alt="Арт-искусство"><span class="catalog-choice__name">Арт-искусство</span><span class="catalog-choice__mark" aria-hidden="true"></span></label>
+              <label class="catalog-choice__card" for="cat-photo"><img class="catalog-choice__image" src="images/Foto/photo-1.jpg" alt="Фото"><span class="catalog-choice__name">Фото</span><span class="catalog-choice__mark" aria-hidden="true"></span></label>
+              <label class="catalog-choice__card" for="cat-design"><img class="catalog-choice__image" src="images/Design/web-1.jpg" alt="Дизайн"><span class="catalog-choice__name">Дизайн</span><span class="catalog-choice__mark" aria-hidden="true"></span></label>
+              <label class="catalog-choice__card" for="cat-merch"><img class="catalog-choice__image" src="images/Merch/breloki.jpg" alt="Мерч"><span class="catalog-choice__name">Мерч</span><span class="catalog-choice__mark" aria-hidden="true"></span></label>
+              <label class="catalog-choice__card" for="cat-craft"><img class="catalog-choice__image" src="images/Craft/craft-1.jpg" alt="Крафт"><span class="catalog-choice__name">Крафт</span><span class="catalog-choice__mark" aria-hidden="true"></span></label>
+              <label class="catalog-choice__card" for="cat-animation"><img class="catalog-choice__image" src="images/Animation/anim-1.jpg" alt="Анимации"><span class="catalog-choice__name">Анимации</span><span class="catalog-choice__mark" aria-hidden="true"></span></label>
             </div>
           </section>
 
           <section class="catalog-result">
             <div class="catalog-result__head">
               <h2 class="catalog-result__title">Товары</h2>
-              <label class="button button--ghost button--small" for="catalog-select">Изменить каталоги</label>
             </div>
-
             <div class="catalog-result__layout">
               <aside class="catalog-filters">
                 <h2 class="catalog-filters__title">Фильтры</h2>
-
                 <fieldset class="catalog-filters__group catalog-filters__group--catalogs">
                   <legend>Каталоги</legend>
-                  <div class="catalog-filters__chips"><label class="filter-chip" for="cat-art">Арт-искусство</label><label class="filter-chip" for="cat-photo">Фото</label><label class="filter-chip" for="cat-design">Дизайн</label><label class="filter-chip" for="cat-merch">Мерч</label><label class="filter-chip" for="cat-craft">Крафт</label><label class="filter-chip" for="cat-animation">Анимации</label></div>
-                </fieldset>
-
-                <fieldset class="catalog-filters__group catalog-filters__group--common">
-                  <legend>Общие фильтры</legend>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Цена</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="price-filter" id="price-all" checked><span>Любая</span></label><label class="filter-option"><input type="radio" name="price-filter" id="price-low"><span>до 2 000 ₽</span></label><label class="filter-option"><input type="radio" name="price-filter" id="price-mid"><span>2 000–15 000 ₽</span></label><label class="filter-option"><input type="radio" name="price-filter" id="price-high"><span>от 15 000 ₽</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Размер</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="size-filter" id="size-all" checked><span>Любой</span></label><label class="filter-option"><input type="radio" name="size-filter" id="size-s"><span>S</span></label><label class="filter-option"><input type="radio" name="size-filter" id="size-m"><span>M</span></label><label class="filter-option"><input type="radio" name="size-filter" id="size-l"><span>L</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Цвет</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="color-filter" id="color-all" checked><span>Любой</span></label><label class="filter-option"><input type="radio" name="color-filter" id="color-red"><span>красный</span></label><label class="filter-option"><input type="radio" name="color-filter" id="color-blue"><span>синий</span></label><label class="filter-option"><input type="radio" name="color-filter" id="color-cream"><span>кремовый</span></label></div>
+                  <div class="catalog-filters__chips">
+                    <label class="filter-chip" for="cat-art">Арт-искусство</label>
+                    <label class="filter-chip" for="cat-photo">Фото</label>
+                    <label class="filter-chip" for="cat-design">Дизайн</label>
+                    <label class="filter-chip" for="cat-merch">Мерч</label>
+                    <label class="filter-chip" for="cat-craft">Крафт</label>
+                    <label class="filter-chip" for="cat-animation">Анимации</label>
                   </div>
                 </fieldset>
-
-                <fieldset class="catalog-filters__group catalog-filters__group--unique">
-                  <legend>Уникальные фильтры</legend>
-                  <p class="filter-hint">Фильтры направлений: показывают работы только из нужного каталога.</p>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Арт: техника</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-painting"><span>живопись</span></label><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-graphic"><span>графика</span></label><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-digital"><span>диджитал</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Фото: жанр</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-portrait"><span>портрет</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-family"><span>семейное</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-wedding"><span>свадьба</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-animals"><span>животные</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Дизайн: тип</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="design-type" id="design-type-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="design-type" id="design-type-web"><span>веб</span></label><label class="filter-option"><input type="radio" name="design-type" id="design-type-graphic"><span>графика</span></label><label class="filter-option"><input type="radio" name="design-type" id="design-type-motion"><span>моушен</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Мерч: вид</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-brelok"><span>брелок</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-sticker"><span>стикер</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-print"><span>типография</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-accessory"><span>аксессуар</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Крафт: материал</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-low"><span>низкий</span></label><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-medium"><span>средний</span></label><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-high"><span>высокий</span></label></div>
-                  </div>
-                  <div class="filter-group">
-                    <span class="filter-group__label">Анимации: тип</span>
-                    <div class="filter-options"><label class="filter-option"><input type="radio" name="anim-type" id="anim-type-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="anim-type" id="anim-type-zastavka"><span>заставка</span></label><label class="filter-option"><input type="radio" name="anim-type" id="anim-type-clip"><span>клип</span></label></div>
-                  </div>
-                </fieldset>
+                <div class="catalog-filters__launchers">
+                  <label class="button button--small" for="filters-common-open">Общие фильтры</label>
+                  <label class="button button--ghost button--small" for="filters-unique-open">Уникальные фильтры</label>
+                </div>
+                <input class="filter-window__check" type="checkbox" id="filters-common-open">
+                <div class="filter-window filter-window--common">
+                  <label class="filter-window__close" for="filters-common-open">Закрыть</label>
+                  <fieldset class="catalog-filters__group catalog-filters__group--common">
+                    <legend>Общие фильтры</legend>
+                    <div class="filter-group">
+                      <span class="filter-group__label">Цена</span>
+                      <div class="filter-options">
+                        <label class="filter-option"><input type="radio" name="price-filter" id="price-all" checked><span>Любая</span></label>
+                        <label class="filter-option"><input type="radio" name="price-filter" id="price-low"><span>до 2 000 ₽</span></label>
+                        <label class="filter-option"><input type="radio" name="price-filter" id="price-mid"><span>2 000–15 000 ₽</span></label>
+                        <label class="filter-option"><input type="radio" name="price-filter" id="price-high"><span>от 15 000 ₽</span></label>
+                      </div>
+                    </div>
+                    <div class="filter-group">
+                      <span class="filter-group__label">Размер</span>
+                      <div class="filter-options">
+                        <label class="filter-option"><input type="radio" name="size-filter" id="size-all" checked><span>Любой</span></label>
+                        <label class="filter-option"><input type="radio" name="size-filter" id="size-s"><span>S</span></label>
+                        <label class="filter-option"><input type="radio" name="size-filter" id="size-m"><span>M</span></label>
+                        <label class="filter-option"><input type="radio" name="size-filter" id="size-l"><span>L</span></label>
+                      </div>
+                    </div>
+                    <div class="filter-group">
+                      <span class="filter-group__label">Цвет</span>
+                      <p class="filter-hint">Цвет берётся из тегов работы. У одной работы может быть несколько цветов.</p>
+                      <div class="filter-options">
+                        <label class="filter-option"><input type="radio" name="color-filter" id="color-all" checked><span>Любой</span></label>
+                        <label class="filter-option"><input type="radio" name="color-filter" id="color-red"><span class="filter-swatch filter-swatch--red">красный</span></label>
+                        <label class="filter-option"><input type="radio" name="color-filter" id="color-blue"><span class="filter-swatch filter-swatch--blue">синий</span></label>
+                        <label class="filter-option"><input type="radio" name="color-filter" id="color-cream"><span class="filter-swatch filter-swatch--cream">кремовый</span></label>
+                        <label class="filter-option"><input type="radio" name="color-filter" id="color-green"><span class="filter-swatch filter-swatch--green">зелёный</span></label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <input class="filter-window__check" type="checkbox" id="filters-unique-open">
+                <div class="filter-window filter-window--unique">
+                  <label class="filter-window__close" for="filters-unique-open">Закрыть</label>
+                  <fieldset class="catalog-filters__group catalog-filters__group--unique">
+                    <legend>Уникальные фильтры</legend>
+                    <p class="filter-hint unique-filter-empty">Отметьте каталог, чтобы увидеть его фильтры.</p>
+                    <div class="unique-filter unique-filter--art">
+                      <div class="filter-group"><span class="filter-group__label">Арт: техника</span><div class="filter-options"><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-painting"><span>живопись</span></label><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-graphic"><span>графика</span></label><label class="filter-option"><input type="radio" name="art-tech" id="art-tech-digital"><span>диджитал</span></label></div></div>
+                    </div>
+                    <div class="unique-filter unique-filter--photo">
+                      <div class="filter-group"><span class="filter-group__label">Фото: жанр</span><div class="filter-options"><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-portrait"><span>портрет</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-family"><span>семейное</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-wedding"><span>свадьба</span></label><label class="filter-option"><input type="radio" name="photo-genre" id="photo-genre-animals"><span>животные</span></label></div></div>
+                    </div>
+                    <div class="unique-filter unique-filter--design">
+                      <div class="filter-group"><span class="filter-group__label">Дизайн: тип</span><div class="filter-options"><label class="filter-option"><input type="radio" name="design-type" id="design-type-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="design-type" id="design-type-web"><span>веб</span></label><label class="filter-option"><input type="radio" name="design-type" id="design-type-graphic"><span>графика</span></label><label class="filter-option"><input type="radio" name="design-type" id="design-type-motion"><span>моушен</span></label></div></div>
+                    </div>
+                    <div class="unique-filter unique-filter--merch">
+                      <div class="filter-group"><span class="filter-group__label">Мерч: вид</span><div class="filter-options"><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-brelok"><span>брелок</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-sticker"><span>стикер</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-print"><span>типография</span></label><label class="filter-option"><input type="radio" name="merch-type" id="merch-type-accessory"><span>аксессуар</span></label></div></div>
+                    </div>
+                    <div class="unique-filter unique-filter--craft">
+                      <div class="filter-group"><span class="filter-group__label">Крафт: материал</span><div class="filter-options"><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-low"><span>низкий</span></label><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-medium"><span>средний</span></label><label class="filter-option"><input type="radio" name="craft-material" id="craft-material-high"><span>высокий</span></label></div></div>
+                    </div>
+                    <div class="unique-filter unique-filter--animation">
+                      <div class="filter-group"><span class="filter-group__label">Анимации: тип</span><div class="filter-options"><label class="filter-option"><input type="radio" name="anim-type" id="anim-type-all" checked><span>Все</span></label><label class="filter-option"><input type="radio" name="anim-type" id="anim-type-zastavka"><span>заставка</span></label><label class="filter-option"><input type="radio" name="anim-type" id="anim-type-clip"><span>клип</span></label></div></div>
+                    </div>
+                  </fieldset>
+                </div>
               </aside>
-
+              <div class="catalog-groups">
+                <p class="catalog-empty">Выберите хотя бы один каталог.</p>
+            <section class="catalog-group catalog-group--art">
+              <h3 class="catalog-group__title">Арт-искусство</h3>
               <div class="catalog-products">
             <article class="product-card product-card--art price-mid art-painting size-m color-red">
-              <a class="product-card__link" href="product.html">
+              <span class="product-card__badge">Хит</span>
+              <a class="product-card__link" href="products/portret-maki.html">
                 <img class="product-card__image" src="images/Art/traditional-full.jpg" alt="Портрет с маками">
               </a>
               <p class="product-card__meta">Арт · живопись · M · красный</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Портрет с маками</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/portret-maki.html">Портрет с маками</a></h3>
+              <p class="product-card__description">Живопись с цветами и тёплым светом.</p>
               <p class="product-card__price">4 500 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/portret-maki.html">Подробнее</a>
             </article>
             <article class="product-card product-card--art price-high art-digital size-l color-blue">
-              <a class="product-card__link" href="product.html">
+              <span class="product-card__badge">Новинка</span>
+              <a class="product-card__link" href="products/nochnoy-gorod.html">
                 <img class="product-card__image" src="images/Art/digital-full.jpg" alt="Ночной город">
               </a>
               <p class="product-card__meta">Арт · диджитал · L · синий</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Ночной город</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/nochnoy-gorod.html">Ночной город</a></h3>
+              <p class="product-card__description">Цифровая иллюстрация ночного города.</p>
               <p class="product-card__price">18 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/nochnoy-gorod.html">Подробнее</a>
+            </article>
+            <article class="product-card product-card--discount product-card--art price-mid art-graphic size-m color-cream">
+              <span class="product-card__badge">Скидка</span>
+              <a class="product-card__link" href="products/nabrosok-tush.html">
+                <img class="product-card__image" src="images/Art/traditional-sketch.jpg" alt="Набросок тушью">
+              </a>
+              <p class="product-card__meta">Арт · графика · M · кремовый</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/nabrosok-tush.html">Набросок тушью</a></h3>
+              <p class="product-card__description">Графический набросок тушью.</p>
+              <p class="product-card__price">3 200 ₽</p>
+              <a class="button button--small" href="products/nabrosok-tush.html">Подробнее</a>
+            </article>
+              </div>
+            </section>
+            <section class="catalog-group catalog-group--photo">
+              <h3 class="catalog-group__title">Фото</h3>
+              <div class="catalog-products">
+            <article class="product-card product-card--photo price-mid photo-portrait size-m color-red">
+              <a class="product-card__link" href="products/portret-svet.html">
+                <img class="product-card__image" src="images/Foto/photo-1.jpg" alt="Портрет «Свет»">
+              </a>
+              <p class="product-card__meta">Фото · портрет · M · красный</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/portret-svet.html">Портрет «Свет»</a></h3>
+              <p class="product-card__price">7 500 ₽</p>
+              <a class="button button--small" href="products/portret-svet.html">Подробнее</a>
             </article>
             <article class="product-card product-card--photo price-mid photo-family size-m color-cream">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/semeynaya-progulka.html">
                 <img class="product-card__image" src="images/Foto/photo-5.jpg" alt="Семейная прогулка">
               </a>
               <p class="product-card__meta">Фото · семейное · M · кремовый</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Семейная прогулка</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/semeynaya-progulka.html">Семейная прогулка</a></h3>
               <p class="product-card__price">6 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/semeynaya-progulka.html">Подробнее</a>
             </article>
             <article class="product-card product-card--photo price-high photo-wedding size-l color-cream">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/svadba-siluet.html">
                 <img class="product-card__image" src="images/Foto/photo-9.jpg" alt="Свадьба «Силуэт»">
               </a>
               <p class="product-card__meta">Фото · свадьба · L · кремовый</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Свадьба «Силуэт»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/svadba-siluet.html">Свадьба «Силуэт»</a></h3>
               <p class="product-card__price">25 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/svadba-siluet.html">Подробнее</a>
             </article>
+            <article class="product-card product-card--photo price-mid photo-animals size-s color-cream">
+              <a class="product-card__link" href="products/lapki.html">
+                <img class="product-card__image" src="images/Foto/photo-6.jpg" alt="«Лапки»">
+              </a>
+              <p class="product-card__meta">Фото · животные · S · кремовый</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/lapki.html">«Лапки»</a></h3>
+              <p class="product-card__price">5 000 ₽</p>
+              <a class="button button--small" href="products/lapki.html">Подробнее</a>
+            </article>
+              </div>
+            </section>
+            <section class="catalog-group catalog-group--design">
+              <h3 class="catalog-group__title">Дизайн</h3>
+              <div class="catalog-products">
             <article class="product-card product-card--design price-high design-web size-l color-blue">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/lending-studiya.html">
                 <img class="product-card__image" src="images/Design/web-1.jpg" alt="Лендинг «Студия»">
               </a>
               <p class="product-card__meta">Дизайн · веб · L · синий</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Лендинг «Студия»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/lending-studiya.html">Лендинг «Студия»</a></h3>
               <p class="product-card__price">40 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/lending-studiya.html">Подробнее</a>
             </article>
             <article class="product-card product-card--design price-mid design-graphic size-m color-red">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/plakat-space.html">
                 <img class="product-card__image" src="images/Design/graphic-1.jpg" alt="Плакат «Space»">
               </a>
               <p class="product-card__meta">Дизайн · графика · M · красный</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Плакат «Space»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/plakat-space.html">Плакат «Space»</a></h3>
               <p class="product-card__price">9 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/plakat-space.html">Подробнее</a>
             </article>
-            <article class="product-card product-card--merch price-low merch-brelok size-s color-red">
-              <a class="product-card__link" href="product.html">
+            <article class="product-card product-card--design price-mid design-motion size-m color-blue">
+              <a class="product-card__link" href="products/titry-neon.html">
+                <img class="product-card__image" src="images/Design/graphic-3.jpg" alt="Титры «Неон»">
+              </a>
+              <p class="product-card__meta">Дизайн · моушен · M · синий</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/titry-neon.html">Титры «Неон»</a></h3>
+              <p class="product-card__price">14 000 ₽</p>
+              <a class="button button--small" href="products/titry-neon.html">Подробнее</a>
+            </article>
+              </div>
+            </section>
+            <section class="catalog-group catalog-group--merch">
+              <h3 class="catalog-group__title">Мерч</h3>
+              <div class="catalog-products">
+            <article class="product-card product-card--merch price-low merch-brelok size-s color-red color-green">
+              <a class="product-card__link" href="products/brelok-korova.html">
                 <img class="product-card__image" src="images/Merch/breloki.jpg" alt="Брелок «Космическая корова»">
               </a>
-              <p class="product-card__meta">Мерч · брелок · S · красный</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Брелок «Космическая корова»</a></h3>
+              <p class="product-card__meta">Мерч · брелок · S · красный, зелёный</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/brelok-korova.html">Брелок «Космическая корова»</a></h3>
               <p class="product-card__price">900 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/brelok-korova.html">Подробнее</a>
+            </article>
+            <article class="product-card product-card--merch price-low merch-sticker size-s color-blue">
+              <a class="product-card__link" href="products/stikerpak.html">
+                <img class="product-card__image" src="images/placeholder/work-02.jpg" alt="Стикерпак «Космос»">
+              </a>
+              <p class="product-card__meta">Мерч · стикер · S · синий</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/stikerpak.html">Стикерпак «Космос»</a></h3>
+              <p class="product-card__price">350 ₽</p>
+              <a class="button button--small" href="products/stikerpak.html">Подробнее</a>
             </article>
             <article class="product-card product-card--merch price-low merch-print size-m color-blue">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/futbolka-kosmos.html">
                 <img class="product-card__image" src="images/Merch/tshirt.jpg" alt="Футболка «Космос»">
               </a>
               <p class="product-card__meta">Мерч · типография · M · синий</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Футболка «Космос»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/futbolka-kosmos.html">Футболка «Космос»</a></h3>
               <p class="product-card__price">1 500 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/futbolka-kosmos.html">Подробнее</a>
+            </article>
+            <article class="product-card product-card--merch price-low merch-print size-m color-cream">
+              <a class="product-card__link" href="products/bloknot.html">
+                <img class="product-card__image" src="images/Merch/notebook.jpg" alt="Блокнот «Линия»">
+              </a>
+              <p class="product-card__meta">Мерч · типография · M · кремовый</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/bloknot.html">Блокнот «Линия»</a></h3>
+              <p class="product-card__price">1 200 ₽</p>
+              <a class="button button--small" href="products/bloknot.html">Подробнее</a>
+            </article>
+            <article class="product-card product-card--merch price-low merch-accessory size-s color-red">
+              <a class="product-card__link" href="products/znachki.html">
+                <img class="product-card__image" src="images/Merch/pins.jpg" alt="Значки">
+              </a>
+              <p class="product-card__meta">Мерч · аксессуар · S · красный</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/znachki.html">Значки</a></h3>
+              <p class="product-card__price">600 ₽</p>
+              <a class="button button--small" href="products/znachki.html">Подробнее</a>
+            </article>
+            <article class="product-card product-card--merch price-low merch-accessory size-m color-blue">
+              <a class="product-card__link" href="products/kepka.html">
+                <img class="product-card__image" src="images/Merch/cap.jpg" alt="Кепка «Знак»">
+              </a>
+              <p class="product-card__meta">Мерч · аксессуар · M · синий</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/kepka.html">Кепка «Знак»</a></h3>
+              <p class="product-card__price">1 800 ₽</p>
+              <a class="button button--small" href="products/kepka.html">Подробнее</a>
+            </article>
+              </div>
+            </section>
+            <section class="catalog-group catalog-group--craft">
+              <h3 class="catalog-group__title">Крафт</h3>
+              <div class="catalog-products">
+            <article class="product-card product-card--craft price-low craft-low size-s color-cream">
+              <a class="product-card__link" href="products/braslet-nit.html">
+                <img class="product-card__image" src="images/Craft/craft-2.jpg" alt="Браслет «Нить»">
+              </a>
+              <p class="product-card__meta">Крафт · низкий материал · S · кремовый</p>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/braslet-nit.html">Браслет «Нить»</a></h3>
+              <p class="product-card__price">1 400 ₽</p>
+              <a class="button button--small" href="products/braslet-nit.html">Подробнее</a>
             </article>
             <article class="product-card product-card--craft price-mid craft-medium size-s color-red">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/sergi-pion.html">
                 <img class="product-card__image" src="images/Craft/craft-1.jpg" alt="Серьги «Пион»">
               </a>
               <p class="product-card__meta">Крафт · средний материал · S · красный</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Серьги «Пион»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/sergi-pion.html">Серьги «Пион»</a></h3>
               <p class="product-card__price">2 500 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/sergi-pion.html">Подробнее</a>
             </article>
             <article class="product-card product-card--craft price-high craft-high size-l color-cream">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/art-obekt-cvetenie.html">
                 <img class="product-card__image" src="images/Craft/craft-4.jpg" alt="Арт-объект «Цветение»">
               </a>
               <p class="product-card__meta">Крафт · высокий материал · L · кремовый</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Арт-объект «Цветение»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/art-obekt-cvetenie.html">Арт-объект «Цветение»</a></h3>
               <p class="product-card__price">30 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/art-obekt-cvetenie.html">Подробнее</a>
             </article>
+              </div>
+            </section>
+            <section class="catalog-group catalog-group--animation">
+              <h3 class="catalog-group__title">Анимации</h3>
+              <div class="catalog-products">
             <article class="product-card product-card--animation price-mid anim-zastavka size-m color-blue">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/piksel-zastavka.html">
                 <img class="product-card__image" src="images/Animation/anim-1.jpg" alt="Пиксельная заставка">
               </a>
               <p class="product-card__meta">Анимации · заставка · M · синий</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Пиксельная заставка</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/piksel-zastavka.html">Пиксельная заставка</a></h3>
               <p class="product-card__price">12 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/piksel-zastavka.html">Подробнее</a>
             </article>
             <article class="product-card product-card--animation price-high anim-clip size-l color-red">
-              <a class="product-card__link" href="product.html">
+              <a class="product-card__link" href="products/klip-neon.html">
                 <img class="product-card__image" src="images/Animation/anim-2.jpg" alt="Клип «Неон»">
               </a>
               <p class="product-card__meta">Анимации · клип · L · красный</p>
-              <h3 class="product-card__title"><a class="product-card__title-link" href="product.html">Клип «Неон»</a></h3>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/klip-neon.html">Клип «Неон»</a></h3>
               <p class="product-card__price">25 000 ₽</p>
-              <a class="button button--small" href="product.html">Подробнее</a>
+              <a class="button button--small" href="products/klip-neon.html">Подробнее</a>
             </article>
-                <p class="catalog-empty">Выберите хотя бы один каталог.</p>
+              </div>
+            </section>
               </div>
             </div>
           </section>
@@ -271,20 +393,49 @@
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
-      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+  <div class="site-footer__inner">
+    <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <a class="site-footer__link" href="index.html">Главная</a>
-        <a class="site-footer__link" href="catalog.html">Каталог</a>
-        <a class="site-footer__link" href="order.html">Заявка</a>
-        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
-        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
-        <a class="site-footer__link" href="original.html">Оригиналы</a>
-      </nav>
-      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+        <a class="site-footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="site-footer__link" href="index.html#popular">Популярные</a>
+        <a class="site-footer__link" href="index.html#contacts">Контакты</a>
+        <a class="site-footer__link" href="catalog.html">Каталог услуг</a>
+        <a class="site-footer__link" href="order.html">Заказ</a>
+        <a class="site-footer__link" href="contacts.html">Соцсети</a>
+        <a class="site-footer__link" href="original.html">Ориджин</a>
+    </nav>
+    <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+  </div>
+  <div class="site-footer__support" id="support">
+    <div class="site-footer__inner site-footer__support-inner">
+      <div>
+        <h2 class="support__title">Тех. поддержка</h2>
+        <p class="support__text">Если сайт работает некорректно, напишите сразу — ответим в течение рабочего дня.</p>
+      </div>
+      <form class="form support-form" method="post" action="#">
+        <h3>Написать в поддержку</h3>
+        <label class="field">
+          <span class="field__label">ФИО</span>
+          <input class="field__control" type="text" name="support-name" placeholder="Фамилия Имя Отчество" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Почта</span>
+          <input class="field__control" type="email" name="support-email" placeholder="you@example.ru" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение</span>
+          <textarea class="field__control field__control--grow" name="support-message" rows="4" placeholder="Что случилось"></textarea>
+        </label>
+        <button class="button button--small" type="submit">Отправить</button>
+        <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+      </form>
     </div>
-  </footer>
-
-  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+  </div>
+</footer>
+<div class="scroll-controls">
+  <a class="scroll-controls__btn" href="#main" aria-label="К началу содержимого">↑</a>
+  <a class="scroll-controls__btn scroll-controls__top" href="#top" aria-label="В начало страницы">⤒</a>
+</div>
 </body>
 </html>

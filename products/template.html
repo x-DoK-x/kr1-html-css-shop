@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаблон товара — Творчество</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!--
+    Базовая структура вкладки товара.
+    Скопируйте файл, поменяйте title, картинку (../images/...), цену, текст и строки таблицы.
+    Стили и шапка подключаются так же, как на готовых страницах в этой папке.
+    Ссылка из каталога: products/имя-файла.html
+  -->
+  <main id="main">
+    <section class="section" id="product">
+      <div class="container">
+        <p class="crumbs"><a class="crumbs__link" href="../index.html">Главная</a> / <a class="crumbs__link" href="../catalog.html">Каталог услуг</a> / <span class="crumbs__current">Название</span></p>
+        <div class="product">
+          <div class="product__media">
+            <img class="product__image" src="../images/placeholder/work-01.jpg" alt="Название">
+          </div>
+          <div class="product__info">
+            <h1 class="page-title">Название работы</h1>
+            <p class="product__price">0 ₽</p>
+            <p class="product__text">Короткое описание.</p>
+            <div class="product__actions">
+              <a class="button" href="../order.html">Оформить заказ</a>
+              <a class="button button--ghost" href="#quick-order">Быстрый заказ</a>
+            </div>
+            <table class="specs">
+              <caption>Характеристики</caption>
+              <tbody>
+                <tr><th scope="row">Параметр</th><td>значение</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
