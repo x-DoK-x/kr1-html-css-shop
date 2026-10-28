@@ -5,89 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Оригинальные работы студии «Творчество»: живопись, графика и постеры в единственном экземпляре.">
   <title>Оригинальные работы — Творчество</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
   <header class="site-header" id="top">
   <div class="site-header__inner">
-    <div class="site-header__panel" id="price-menu-panel">
-        <ul class="price-menu__list">
+    <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <div class="site-header__panel" id="price-menu-panel">
+      <ul class="price-menu__list">
             <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
-        </ul>
+      </ul>
     </div>
-
     <div class="site-header__cover">
       <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
     </div>
   </div>
-
   <div class="site-header__nav">
-      <a class="site-logo" href="index.html">
-        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
-        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
-      </a>
-      <nav class="site-nav" aria-label="Навигация по сайту">
+    <nav class="site-nav" aria-label="Навигация по сайту">
           <a class="site-nav__link" href="index.html">Главная</a>
-          <a class="site-nav__link" href="catalog.html" aria-current="page">Каталог</a>
-          <a class="site-nav__link" href="order.html">Заявка</a>
-          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
-          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
-      </nav>
+          <a class="site-nav__link" href="catalog.html">Каталог услуг</a>
+          <a class="site-nav__link" href="order.html">Заказ</a>
+          <a class="site-nav__link" href="original.html" aria-current="page">Ориджин</a>
+          <a class="site-nav__link" href="contacts.html">Соцсети</a>
+    </nav>
   </div>
 </header>
-  <main>
+  <main id="main">
     <section class="section">
       <div class="container">
         <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <a class="crumbs__link" href="catalog.html">Каталог</a> / <span class="crumbs__current">Оригиналы</span></p>
         <h1 class="page-title">Оригинальные работы</h1>
-        <p class="page-lead">Живопись, графика и постеры в единственном экземпляре. Цена указана за оригинал.</p>
+        <p class="page-lead">Живопись, графика и постеры в единственном экземпляре. Цена указана за оригинал. Корзина — вкладка «Ориджин» в <a class="link" href="order.html#order-form-original">заказе</a>.</p>
         <div class="original-grid">
           <article class="original-card">
-            <img class="original-card__image" src="images/Art/traditional-full.jpg" alt="Ночной город">
-            <h3 class="original-card__title">Ночной город</h3>
+            <a href="products/origin-nochnoy-gorod.html"><img class="original-card__image" src="images/Art/traditional-full.jpg" alt="Ночной город"></a>
+            <h3 class="original-card__title"><a class="product-card__title-link" href="products/origin-nochnoy-gorod.html">Ночной город</a></h3>
             <p class="original-card__meta">Размер: 60 × 80 см</p>
             <p class="original-card__price">18 000 ₽</p>
-            <a class="button button--small" href="order.html">Купить</a>
+            <div class="original-card__actions">
+              <a class="button button--small button--ghost" href="products/origin-nochnoy-gorod.html">Подробнее</a>
+              <a class="button button--small" href="order.html#origin-night">В корзину</a>
+            </div>
           </article>
           <article class="original-card">
-            <img class="original-card__image" src="images/Art/traditional-sketch.jpg" alt="Тёплый портрет">
-            <h3 class="original-card__title">Тёплый портрет</h3>
+            <a href="products/origin-teplyy-portret.html"><img class="original-card__image" src="images/Art/traditional-sketch.jpg" alt="Тёплый портрет"></a>
+            <h3 class="original-card__title"><a class="product-card__title-link" href="products/origin-teplyy-portret.html">Тёплый портрет</a></h3>
             <p class="original-card__meta">Размер: 50 × 70 см</p>
             <p class="original-card__price">24 000 ₽</p>
-            <a class="button button--small" href="order.html">Купить</a>
+            <div class="original-card__actions">
+              <a class="button button--small button--ghost" href="products/origin-teplyy-portret.html">Подробнее</a>
+              <a class="button button--small" href="order.html#origin-portrait">В корзину</a>
+            </div>
           </article>
           <article class="original-card">
-            <img class="original-card__image" src="images/Art/digital-easy-full.jpg" alt="Сад">
-            <h3 class="original-card__title">Сад</h3>
+            <a href="products/origin-sad.html"><img class="original-card__image" src="images/Art/digital-easy-full.jpg" alt="Сад"></a>
+            <h3 class="original-card__title"><a class="product-card__title-link" href="products/origin-sad.html">Сад</a></h3>
             <p class="original-card__meta">Размер: 40 × 50 см</p>
             <p class="original-card__price">12 000 ₽</p>
-            <a class="button button--small" href="order.html">Купить</a>
+            <div class="original-card__actions">
+              <a class="button button--small button--ghost" href="products/origin-sad.html">Подробнее</a>
+              <a class="button button--small" href="order.html#origin-garden">В корзину</a>
+            </div>
           </article>
           <article class="original-card">
-            <img class="original-card__image" src="images/Design/graphic-1.jpg" alt="Плакат «Space»">
-            <h3 class="original-card__title">Плакат «Space»</h3>
+            <a href="products/origin-plakat-space.html"><img class="original-card__image" src="images/Design/graphic-1.jpg" alt="Плакат «Space»"></a>
+            <h3 class="original-card__title"><a class="product-card__title-link" href="products/origin-plakat-space.html">Плакат «Space»</a></h3>
             <p class="original-card__meta">Размер: А2</p>
             <p class="original-card__price">9 000 ₽</p>
-            <a class="button button--small" href="order.html">Купить</a>
+            <div class="original-card__actions">
+              <a class="button button--small button--ghost" href="products/origin-plakat-space.html">Подробнее</a>
+              <a class="button button--small" href="order.html#origin-poster">В корзину</a>
+            </div>
           </article>
           <article class="original-card">
-            <img class="original-card__image" src="images/Art/background-1.jpg" alt="Фон «Космос»">
-            <h3 class="original-card__title">Фон «Космос»</h3>
+            <a href="products/origin-fon-kosmos.html"><img class="original-card__image" src="images/Art/background-1.jpg" alt="Фон «Космос»"></a>
+            <h3 class="original-card__title"><a class="product-card__title-link" href="products/origin-fon-kosmos.html">Фон «Космос»</a></h3>
             <p class="original-card__meta">Размер: 100 × 100 см</p>
             <p class="original-card__price">15 000 ₽</p>
-            <a class="button button--small" href="order.html">Купить</a>
+            <div class="original-card__actions">
+              <a class="button button--small button--ghost" href="products/origin-fon-kosmos.html">Подробнее</a>
+              <a class="button button--small" href="order.html#origin-space">В корзину</a>
+            </div>
           </article>
           <article class="original-card">
-            <img class="original-card__image" src="images/Art/digital-full.jpg" alt="Персонаж">
-            <h3 class="original-card__title">Персонаж</h3>
+            <a href="products/origin-personazh.html"><img class="original-card__image" src="images/Art/digital-full.jpg" alt="Персонаж"></a>
+            <h3 class="original-card__title"><a class="product-card__title-link" href="products/origin-personazh.html">Персонаж</a></h3>
             <p class="original-card__meta">Размер: 30 × 40 см</p>
             <p class="original-card__price">7 000 ₽</p>
-            <a class="button button--small" href="order.html">Купить</a>
+            <div class="original-card__actions">
+              <a class="button button--small button--ghost" href="products/origin-personazh.html">Подробнее</a>
+              <a class="button button--small" href="order.html#origin-character">В корзину</a>
+            </div>
           </article>
         </div>
         <p class="form__note">Доставка оригиналов и упаковка обсуждаются индивидуально.</p>
@@ -96,20 +111,49 @@
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
-      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+  <div class="site-footer__inner">
+    <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <a class="site-footer__link" href="index.html">Главная</a>
-        <a class="site-footer__link" href="catalog.html">Каталог</a>
-        <a class="site-footer__link" href="order.html">Заявка</a>
-        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
-        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
-        <a class="site-footer__link" href="original.html">Оригиналы</a>
-      </nav>
-      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+        <a class="site-footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="site-footer__link" href="index.html#popular">Популярные</a>
+        <a class="site-footer__link" href="index.html#contacts">Контакты</a>
+        <a class="site-footer__link" href="catalog.html">Каталог услуг</a>
+        <a class="site-footer__link" href="order.html">Заказ</a>
+        <a class="site-footer__link" href="contacts.html">Соцсети</a>
+        <a class="site-footer__link" href="original.html">Ориджин</a>
+    </nav>
+    <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+  </div>
+  <div class="site-footer__support" id="support">
+    <div class="site-footer__inner site-footer__support-inner">
+      <div>
+        <h2 class="support__title">Тех. поддержка</h2>
+        <p class="support__text">Если сайт работает некорректно, напишите сразу — ответим в течение рабочего дня.</p>
+      </div>
+      <form class="form support-form" method="post" action="#">
+        <h3>Написать в поддержку</h3>
+        <label class="field">
+          <span class="field__label">ФИО</span>
+          <input class="field__control" type="text" name="support-name" placeholder="Фамилия Имя Отчество" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Почта</span>
+          <input class="field__control" type="email" name="support-email" placeholder="you@example.ru" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение</span>
+          <textarea class="field__control field__control--grow" name="support-message" rows="4" placeholder="Что случилось"></textarea>
+        </label>
+        <button class="button button--small" type="submit">Отправить</button>
+        <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+      </form>
     </div>
-  </footer>
-
-  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+  </div>
+</footer>
+<div class="scroll-controls">
+  <a class="scroll-controls__btn" href="#main" aria-label="К началу содержимого">↑</a>
+  <a class="scroll-controls__btn scroll-controls__top" href="#top" aria-label="В начало страницы">⤒</a>
+</div>
 </body>
 </html>

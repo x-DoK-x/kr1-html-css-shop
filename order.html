@@ -4,151 +4,314 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Форма заявки на работу: направление, бюджет, сроки и комментарий.">
-  <title>Оформление заявки — Творчество</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <title>Оформление заказа — Творчество</title>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
   <header class="site-header" id="top">
   <div class="site-header__inner">
-    <div class="site-header__panel" id="price-menu-panel">
-        <ul class="price-menu__list">
+    <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <div class="site-header__panel" id="price-menu-panel">
+      <ul class="price-menu__list">
             <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="merch.html">Мерч</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
-        </ul>
+      </ul>
     </div>
-
     <div class="site-header__cover">
       <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
     </div>
   </div>
-
   <div class="site-header__nav">
-      <a class="site-logo" href="index.html">
-        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
-        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
-      </a>
-      <nav class="site-nav" aria-label="Навигация по сайту">
+    <nav class="site-nav" aria-label="Навигация по сайту">
           <a class="site-nav__link" href="index.html">Главная</a>
-          <a class="site-nav__link" href="catalog.html">Каталог</a>
-          <a class="site-nav__link" href="order.html" aria-current="page">Заявка</a>
-          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
-          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
-      </nav>
+          <a class="site-nav__link" href="catalog.html">Каталог услуг</a>
+          <a class="site-nav__link" href="order.html" aria-current="page">Заказ</a>
+          <a class="site-nav__link" href="original.html">Ориджин</a>
+          <a class="site-nav__link" href="contacts.html">Соцсети</a>
+    </nav>
   </div>
 </header>
-  <main>
+  <main id="main">
     <section class="section">
       <div class="container">
-        <h1 class="page-title">Оформление заявки</h1>
+        <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <span class="crumbs__current">Заказ</span></p>
+        <h1 class="page-title">Оформление заказа</h1>
         <p class="page-lead">Расскажите об идее — подберём направление и сроки.</p>
-        <div class="order">
-          <form class="form order__form" id="order-form" action="#" method="post">
-            <div class="form__grid">
-              <label class="field">
-                <span class="field__label">Имя</span>
-                <input class="field__control" type="text" name="name" placeholder="Как к вам обращаться" required>
-              </label>
-              <label class="field">
-                <span class="field__label">Телефон</span>
-                <input class="field__control" type="tel" name="phone" placeholder="+7 (999) 000-00-00" pattern="\+?[0-9\s\-()]{10,18}" required>
-              </label>
-              <label class="field">
-                <span class="field__label">Email</span>
-                <input class="field__control" type="email" name="email" placeholder="you@example.ru" required>
-              </label>
-              <label class="field">
-                <span class="field__label">Направление</span>
-                <select class="field__control" name="direction" required>
-                  <option value="">Выберите направление</option>
-                  <option>Арт-искусство</option>
-                  <option>Мерч</option>
-                  <option>Крафт</option>
-                  <option>Анимации</option>
-                  <option>Дизайн</option>
-                  <option>Фотография</option>
-                </select>
-              </label>
-              <label class="field">
-                <span class="field__label">Бюджет</span>
-                <select class="field__control" name="budget">
-                  <option>до 5 000 ₽</option>
-                  <option>5 000–15 000 ₽</option>
-                  <option>15 000–30 000 ₽</option>
-                  <option>от 30 000 ₽</option>
-                </select>
-              </label>
-              <label class="field">
-                <span class="field__label">Срок</span>
-                <select class="field__control" name="deadline">
-                  <option>не срочно</option>
-                  <option>в течение месяца</option>
-                  <option>в течение недели</option>
-                </select>
-              </label>
-              <label class="field field--full">
-                <span class="field__label">Комментарий</span>
-                <textarea class="field__control" name="message" rows="5" placeholder="Опишите идею, размеры, референсы"></textarea>
-              </label>
+        <div class="order-layout">
+          <div class="order-switch">
+            <div class="order-switch__bar">
+              <a href="#order-form-original">Ориджин</a>
+              <a href="#order-form">Индивидуальный</a>
             </div>
-            <label class="checkbox">
-              <input type="checkbox" name="consent" required>
-              <span>Согласен с обработкой персональных данных</span>
-            </label>
-            <button class="button" type="submit">Отправить заявку</button>
-            <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
-          </form>
 
-          <aside class="order__aside">
-            <h2 class="order__title">Как проходит заказ</h2>
-            <ol class="steps">
-              <li>Обсуждаем идею, референсы и сроки.</li>
-              <li>Согласуем эскиз и стоимость.</li>
-              <li>Делаем работу и показываем промежуточный результат.</li>
-              <li>Вносим правки и передаём готовую работу.</li>
-            </ol>
-            <p class="order__contacts">Вопросы: <a class="link" href="tel:+79991234567">+7 (999) 123-45-67</a></p>
-          </aside>
-        </div>
+            <form class="form order__form order-pane order-pane--individual" id="order-form" action="thanks.html" method="get">
+              <div class="order">
+                <div>
+                  <div class="form__grid">
+                    <label class="field" for="order-name">
+                      <span class="field__label">Имя</span>
+                      <input class="field__control" id="order-name" type="text" name="name" placeholder="Как к вам обращаться" required>
+                    </label>
+                    <label class="field" for="order-phone">
+                      <span class="field__label">Телефон</span>
+                      <input class="field__control" id="order-phone" type="tel" name="phone" placeholder="+7 (999) 000-00-00" pattern="\+?[0-9\s\-()]{10,18}" required>
+                    </label>
+                    <label class="field" for="order-email">
+                      <span class="field__label">Email</span>
+                      <input class="field__control" id="order-email" type="email" name="email" placeholder="you@example.ru" required>
+                    </label>
+                    <label class="field" for="order-direction">
+                      <span class="field__label">Направление</span>
+                      <select class="field__control" id="order-direction" name="direction" required>
+                        <option value="">Выберите направление</option>
+                        <option>Арт-искусство</option>
+                        <option>Мерч</option>
+                        <option>Крафт</option>
+                        <option>Анимации</option>
+                        <option>Дизайн</option>
+                        <option>Фотография</option>
+                      </select>
+                    </label>
+                    <label class="field" for="order-budget">
+                      <span class="field__label">Бюджет</span>
+                      <input class="field__control" id="order-budget" type="text" name="budget" list="budget-list" placeholder="Выберите или впишите свою сумму" required>
+                      <datalist id="budget-list">
+                        <option value="до 5 000 ₽"></option>
+                        <option value="5 000–15 000 ₽"></option>
+                        <option value="15 000–30 000 ₽"></option>
+                        <option value="от 30 000 ₽"></option>
+                      </datalist>
+                    </label>
+                    <label class="field" for="order-deadline">
+                      <span class="field__label">Срок</span>
+                      <select class="field__control" id="order-deadline" name="deadline" required>
+                        <option value="">Выберите срок</option>
+                        <option>Очень срочно (обсудим)</option>
+                        <option>Как можно быстрее</option>
+                        <option>В течение месяца</option>
+                        <option>В течение 2–3 месяцев</option>
+                        <option>Не важно</option>
+                      </select>
+                      <span class="field__hint">Чем раньше — тем дороже. Некоторые работы нельзя сделать за неделю.</span>
+                    </label>
+                    <label class="field field--full" for="order-message">
+                      <span class="field__label">Комментарий</span>
+                      <textarea class="field__control field__control--grow" id="order-message" name="message" rows="5" minlength="40" required placeholder="Формат, идея и референсы — чем подробнее, тем лучше"></textarea>
+                      <span class="field__hint">Напишите подробно, что хотите: формат, идея и референсы. Минимум 40 символов.</span>
+                    </label>
+                    <label class="field field--full" for="order-files">
+                      <span class="field__label">Файлы и фото</span>
+                      <input class="field__control" id="order-files" type="file" name="files" multiple accept="image/*,.pdf,.zip,.psd,.ai,.fig">
+                      <span class="field__hint">Можно прикрепить сразу любое количество файлов и фотографий.</span>
+                    </label>
+                  </div>
+                  <label class="checkbox" for="order-consent">
+                    <input id="order-consent" type="checkbox" name="consent" required>
+                    <span>Согласен с обработкой персональных данных</span>
+                  </label>
+                  <button class="button" type="submit">Отправить заказ</button>
+                  <p class="form__note">Учебная форма: данные не отправляются на сервер. После отправки откроется страница благодарности.</p>
+                </div>
+                <aside class="order__aside">
+                  <h2 class="order__title">Как проходит заказ</h2>
+                  <ol class="steps">
+                    <li>Обсуждаем идею, референсы и сроки.</li>
+                    <li>Согласуем эскиз и стоимость.</li>
+                    <li>Делаем работу и показываем промежуточный результат.</li>
+                    <li>Вносим правки и передаём готовую работу.</li>
+                  </ol>
+                </aside>
+              </div>
+            </form>
 
-        <section class="order__example">
-          <img class="order__example-image" src="images/Art/traditional-full.jpg" alt="Пример оформления идеи">
-          <div class="order__example-body">
-            <h2 class="order__example-title">Пример оформления идеи</h2>
-            <p class="order__example-text">Так можно описать задумку — этого достаточно, чтобы мы поняли задачу.</p>
-            <ul class="order__example-list">
-              <li><span>Направление</span> Арт-искусство</li>
-              <li><span>Идея</span> Портрет с цветами, тёплые оттенки</li>
-              <li><span>Формат</span> 40 × 50 см, цифровая графика</li>
-              <li><span>Референсы</span> Фото с маками, мягкий свет</li>
-              <li><span>Бюджет</span> до 10 000 ₽</li>
-              <li><span>Срок</span> 2 недели</li>
-            </ul>
-            <a class="button button--small" href="#order-form">Заполнить по образцу</a>
+            <form class="form order__form order-pane order-pane--original" id="order-form-original" action="thanks.html" method="get">
+              <div class="origin-cart" id="origin-cart">
+                <h2 class="order__title">Корзина</h2>
+                <p class="form__note">Впишите количество у нужных работ. Ноль — эту работу не заказываем.</p>
+                <ul class="origin-cart__list">
+                  <li class="origin-cart__item" id="origin-night">
+                    <input class="origin-cart__drop" type="checkbox" id="drop-night">
+                    <div class="origin-cart__main">
+                      <img src="images/Art/traditional-full.jpg" alt="">
+                      <div>
+                        <a class="origin-cart__title" href="products/origin-nochnoy-gorod.html">Ночной город</a>
+                        <p class="origin-cart__price">18 000 ₽</p>
+                      </div>
+                      <label class="origin-cart__qty">Кол-во
+                        <input type="number" name="qty-night" min="0" value="0">
+                      </label>
+                    </div>
+                    <label class="origin-cart__remove" for="drop-night">Удалить</label>
+                  </li>
+                  <li class="origin-cart__item" id="origin-portrait">
+                    <input class="origin-cart__drop" type="checkbox" id="drop-portrait">
+                    <div class="origin-cart__main">
+                      <img src="images/Art/traditional-sketch.jpg" alt="">
+                      <div>
+                        <a class="origin-cart__title" href="products/origin-teplyy-portret.html">Тёплый портрет</a>
+                        <p class="origin-cart__price">24 000 ₽</p>
+                      </div>
+                      <label class="origin-cart__qty">Кол-во
+                        <input type="number" name="qty-portrait" min="0" value="0">
+                      </label>
+                    </div>
+                    <label class="origin-cart__remove" for="drop-portrait">Удалить</label>
+                  </li>
+                  <li class="origin-cart__item" id="origin-garden">
+                    <input class="origin-cart__drop" type="checkbox" id="drop-garden">
+                    <div class="origin-cart__main">
+                      <img src="images/Art/digital-easy-full.jpg" alt="">
+                      <div>
+                        <a class="origin-cart__title" href="products/origin-sad.html">Сад</a>
+                        <p class="origin-cart__price">12 000 ₽</p>
+                      </div>
+                      <label class="origin-cart__qty">Кол-во
+                        <input type="number" name="qty-garden" min="0" value="0">
+                      </label>
+                    </div>
+                    <label class="origin-cart__remove" for="drop-garden">Удалить</label>
+                  </li>
+                  <li class="origin-cart__item" id="origin-poster">
+                    <input class="origin-cart__drop" type="checkbox" id="drop-poster">
+                    <div class="origin-cart__main">
+                      <img src="images/Design/graphic-1.jpg" alt="">
+                      <div>
+                        <a class="origin-cart__title" href="products/origin-plakat-space.html">Плакат «Space»</a>
+                        <p class="origin-cart__price">9 000 ₽</p>
+                      </div>
+                      <label class="origin-cart__qty">Кол-во
+                        <input type="number" name="qty-poster" min="0" value="0">
+                      </label>
+                    </div>
+                    <label class="origin-cart__remove" for="drop-poster">Удалить</label>
+                  </li>
+                  <li class="origin-cart__item" id="origin-space">
+                    <input class="origin-cart__drop" type="checkbox" id="drop-space">
+                    <div class="origin-cart__main">
+                      <img src="images/Art/background-1.jpg" alt="">
+                      <div>
+                        <a class="origin-cart__title" href="products/origin-fon-kosmos.html">Фон «Космос»</a>
+                        <p class="origin-cart__price">15 000 ₽</p>
+                      </div>
+                      <label class="origin-cart__qty">Кол-во
+                        <input type="number" name="qty-space" min="0" value="0">
+                      </label>
+                    </div>
+                    <label class="origin-cart__remove" for="drop-space">Удалить</label>
+                  </li>
+                  <li class="origin-cart__item" id="origin-character">
+                    <input class="origin-cart__drop" type="checkbox" id="drop-character">
+                    <div class="origin-cart__main">
+                      <img src="images/Art/digital-full.jpg" alt="">
+                      <div>
+                        <a class="origin-cart__title" href="products/origin-personazh.html">Персонаж</a>
+                        <p class="origin-cart__price">7 000 ₽</p>
+                      </div>
+                      <label class="origin-cart__qty">Кол-во
+                        <input type="number" name="qty-character" min="0" value="0">
+                      </label>
+                    </div>
+                    <label class="origin-cart__remove" for="drop-character">Удалить</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="form__grid">
+                <label class="field">
+                  <span class="field__label">Имя</span>
+                  <input class="field__control" type="text" name="name" placeholder="Как к вам обращаться" required>
+                </label>
+                <label class="field">
+                  <span class="field__label">Телефон</span>
+                  <input class="field__control" type="tel" name="phone" placeholder="+7 (999) 000-00-00" pattern="\+?[0-9\s\-()]{10,18}" required>
+                </label>
+                <label class="field field--full">
+                  <span class="field__label">Email</span>
+                  <input class="field__control" type="email" name="email" placeholder="you@example.ru" required>
+                </label>
+                <label class="field field--full">
+                  <span class="field__label">Комментарий</span>
+                  <textarea class="field__control" name="message" rows="3" placeholder="Доставка, упаковка, как передать работу"></textarea>
+                </label>
+              </div>
+              <label class="checkbox">
+                <input type="checkbox" name="consent" required>
+                <span>Согласен с обработкой персональных данных</span>
+              </label>
+              <button class="button" type="submit">Заказать выбранное</button>
+              <p class="form__note">Учебная форма: данные не отправляются на сервер. В заказ попадут работы из этой корзины и их количество.</p>
+            </form>
           </div>
-        </section>
+
+          <section class="order__example">
+            <div class="order__example-body">
+              <h2 class="order__example-title">Пример оформления идеи</h2>
+              <p class="order__example-text">Так можно описать задумку: формат, идея и референсы.</p>
+              <ul class="order__example-list">
+                <li><span>Направление</span> Арт-искусство</li>
+                <li><span>Идея</span> Портрет с цветами, тёплые оттенки</li>
+                <li><span>Формат</span> 40 × 50 см, цифровая графика</li>
+                <li><span>Референсы</span> Фото с маками, мягкий свет</li>
+                <li><span>Бюджет</span> до 10 000 ₽</li>
+                <li><span>Срок</span> В течение месяца</li>
+              </ul>
+              <a class="button button--small" href="#order-form">Заполнить по образцу</a>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
-      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+  <div class="site-footer__inner">
+    <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <a class="site-footer__link" href="index.html">Главная</a>
-        <a class="site-footer__link" href="catalog.html">Каталог</a>
-        <a class="site-footer__link" href="order.html">Заявка</a>
-        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
-        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
-        <a class="site-footer__link" href="original.html">Оригиналы</a>
-      </nav>
-      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+        <a class="site-footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="site-footer__link" href="index.html#popular">Популярные</a>
+        <a class="site-footer__link" href="index.html#contacts">Контакты</a>
+        <a class="site-footer__link" href="catalog.html">Каталог услуг</a>
+        <a class="site-footer__link" href="order.html">Заказ</a>
+        <a class="site-footer__link" href="contacts.html">Соцсети</a>
+        <a class="site-footer__link" href="original.html">Ориджин</a>
+    </nav>
+    <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+  </div>
+  <div class="site-footer__support" id="support">
+    <div class="site-footer__inner site-footer__support-inner">
+      <div>
+        <h2 class="support__title">Тех. поддержка</h2>
+        <p class="support__text">Если сайт работает некорректно, напишите сразу — ответим в течение рабочего дня.</p>
+      </div>
+      <form class="form support-form" method="post" action="#">
+        <h3>Написать в поддержку</h3>
+        <label class="field">
+          <span class="field__label">ФИО</span>
+          <input class="field__control" type="text" name="support-name" placeholder="Фамилия Имя Отчество" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Почта</span>
+          <input class="field__control" type="email" name="support-email" placeholder="you@example.ru" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение</span>
+          <textarea class="field__control field__control--grow" name="support-message" rows="4" placeholder="Что случилось"></textarea>
+        </label>
+        <button class="button button--small" type="submit">Отправить</button>
+        <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+      </form>
     </div>
-  </footer>
-
-  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+  </div>
+</footer>
+<div class="scroll-controls">
+  <a class="scroll-controls__btn" href="#main" aria-label="К началу содержимого">↑</a>
+  <a class="scroll-controls__btn scroll-controls__top" href="#top" aria-label="В начало страницы">⤒</a>
+</div>
 </body>
 </html>

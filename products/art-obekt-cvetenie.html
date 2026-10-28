@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Арт-объект «Цветение»: описание, характеристики и заказ.">
+  <title>Арт-объект «Цветение» — Творчество</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header" id="top">
+  <div class="site-header__inner">
+    <a class="site-logo" href="../index.html">
+        <img class="site-logo__image" src="../images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="../images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <div class="site-header__panel" id="price-menu-panel">
+      <ul class="price-menu__list">
+            <li class="price-menu__item"><a class="price-menu__link" href="../art.html">Арт-искусство</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="../merch.html">Мерч</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="../craft.html">Крафт</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="../animation.html">Анимации</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="../design.html">Дизайн</a></li>
+            <li class="price-menu__item"><a class="price-menu__link" href="../photo.html">Фотография</a></li>
+      </ul>
+    </div>
+    <div class="site-header__cover">
+      <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
+    </div>
+  </div>
+  <div class="site-header__nav">
+    <nav class="site-nav" aria-label="Навигация по сайту">
+          <a class="site-nav__link" href="../index.html">Главная</a>
+          <a class="site-nav__link" href="../catalog.html" aria-current="page">Каталог услуг</a>
+          <a class="site-nav__link" href="../order.html">Заказ</a>
+          <a class="site-nav__link" href="../original.html">Ориджин</a>
+          <a class="site-nav__link" href="../contacts.html">Соцсети</a>
+    </nav>
+  </div>
+</header>
+  <main id="main">
+    <section class="section" id="product">
+      <div class="container">
+        <p class="crumbs"><a class="crumbs__link" href="../index.html">Главная</a> / <a class="crumbs__link" href="../catalog.html">Каталог услуг</a> / <span class="crumbs__current">Арт-объект «Цветение»</span></p>
+        <div class="product">
+          <div class="product__media">
+            <img class="product__image" src="../images/Craft/craft-4.jpg" alt="Арт-объект «Цветение»">
+          </div>
+          <div class="product__info">
+            <h1 class="page-title">Арт-объект «Цветение»</h1>
+            <p class="product__price">30 000 ₽</p>
+            <p class="product__text">Крупный объект из сложного материала. Кремовая гамма, один экземпляр.</p>
+            <p class="product__text">Крафт · высокий материал · L · кремовый</p>
+            <div class="product__actions">
+              <a class="button" href="../order.html">Оформить заказ</a>
+              <a class="button button--ghost" href="#quick-order">Быстрый заказ</a>
+            </div>
+            <table class="specs">
+              <caption>Характеристики</caption>
+              <tbody>
+                <tr><th scope="row">Материал</th><td>высокий</td></tr>
+                <tr><th scope="row">Размер</th><td>L</td></tr>
+                <tr><th scope="row">Цвет</th><td>кремовый</td></tr>
+                <tr><th scope="row">Срок</th><td>1–2 месяца</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal" id="quick-order" role="dialog" aria-modal="true" aria-labelledby="quick-order-title">
+          <div class="modal__dialog">
+            <a class="modal__close" href="#product" aria-label="Закрыть окно">×</a>
+            <h2 class="modal__title" id="quick-order-title">Быстрый заказ</h2>
+            <p class="modal__text">Оставьте имя и телефон — свяжемся, чтобы подтвердить заказ «Арт-объект «Цветение»».</p>
+            <form class="form" action="../thanks.html" method="get">
+              <input type="hidden" name="work" value="Арт-объект «Цветение»">
+              <label class="field">
+                <span class="field__label">Имя</span>
+                <input class="field__control" type="text" name="name" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Телефон</span>
+                <input class="field__control" type="tel" name="phone" pattern="\+?[0-9\s\-()]{10,18}" required>
+              </label>
+              <button class="button" type="submit">Отправить заказ</button>
+              <p class="form__note">Учебная форма: после отправки откроется страница благодарности.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале">
+        <a class="site-footer__link" href="../index.html">Главная</a>
+        <a class="site-footer__link" href="../index.html#advantages">Преимущества</a>
+        <a class="site-footer__link" href="../index.html#popular">Популярные</a>
+        <a class="site-footer__link" href="../index.html#contacts">Контакты</a>
+        <a class="site-footer__link" href="../catalog.html">Каталог услуг</a>
+        <a class="site-footer__link" href="../order.html">Заказ</a>
+        <a class="site-footer__link" href="../contacts.html">Соцсети</a>
+        <a class="site-footer__link" href="../original.html">Ориджин</a>
+    </nav>
+    <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+  </div>
+  <div class="site-footer__support" id="support">
+    <div class="site-footer__inner site-footer__support-inner">
+      <div>
+        <h2 class="support__title">Тех. поддержка</h2>
+        <p class="support__text">Если сайт работает некорректно, напишите сразу — ответим в течение рабочего дня.</p>
+      </div>
+      <form class="form support-form" method="post" action="#">
+        <h3>Написать в поддержку</h3>
+        <label class="field">
+          <span class="field__label">ФИО</span>
+          <input class="field__control" type="text" name="support-name" placeholder="Фамилия Имя Отчество" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Почта</span>
+          <input class="field__control" type="email" name="support-email" placeholder="you@example.ru" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение</span>
+          <textarea class="field__control field__control--grow" name="support-message" rows="4" placeholder="Что случилось"></textarea>
+        </label>
+        <button class="button button--small" type="submit">Отправить</button>
+        <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+      </form>
+    </div>
+  </div>
+</footer>
+<div class="scroll-controls">
+  <a class="scroll-controls__btn" href="#main" aria-label="К началу содержимого">↑</a>
+  <a class="scroll-controls__btn scroll-controls__top" href="#top" aria-label="В начало страницы">⤒</a>
+</div>
+</body>
+</html>

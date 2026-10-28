@@ -5,88 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Мерч студии: брелоки, стикеры, типография и аксессуары.">
   <title>Мерч — Творчество</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style.css"></head>
 <body>
   <header class="site-header" id="top">
   <div class="site-header__inner">
-    <div class="site-header__panel" id="price-menu-panel">
-        <ul class="price-menu__list">
+    <a class="site-logo" href="index.html">
+        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
+        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
+      </a>
+      <div class="site-header__panel" id="price-menu-panel">
+      <ul class="price-menu__list">
             <li class="price-menu__item"><a class="price-menu__link" href="art.html">Арт-искусство</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="merch.html" aria-current="page">Мерч</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="craft.html">Крафт</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="animation.html">Анимации</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="design.html">Дизайн</a></li>
             <li class="price-menu__item"><a class="price-menu__link" href="photo.html">Фотография</a></li>
-        </ul>
+      </ul>
     </div>
-
     <div class="site-header__cover">
       <button class="price-menu__title" type="button" aria-haspopup="true" aria-controls="price-menu-panel">Прайс-лист</button>
     </div>
   </div>
-
   <div class="site-header__nav">
-      <a class="site-logo" href="index.html">
-        <img class="site-logo__image" src="images/site logo.jpg" alt="Логотип творческой студии">
-        <img class="site-logo__image site-logo__image--inverse" src="images/site logo inverse.jpg" alt="" aria-hidden="true">
-      </a>
-      <nav class="site-nav" aria-label="Навигация по сайту">
+    <nav class="site-nav" aria-label="Навигация по сайту">
           <a class="site-nav__link" href="index.html">Главная</a>
-          <a class="site-nav__link" href="catalog.html">Каталог</a>
-          <a class="site-nav__link" href="order.html">Заявка</a>
-          <a class="site-nav__link" href="contacts.html#social">Соцсети</a>
-          <a class="site-nav__link" href="contacts.html#support">Тех.поддержка</a>
-      </nav>
+          <a class="site-nav__link" href="catalog.html">Каталог услуг</a>
+          <a class="site-nav__link" href="order.html">Заказ</a>
+          <a class="site-nav__link" href="original.html">Ориджин</a>
+          <a class="site-nav__link" href="contacts.html">Соцсети</a>
+    </nav>
   </div>
 </header>
-  <main>
+  <main id="main">
     <section class="section">
       <div class="container">
         <p class="crumbs"><a class="crumbs__link" href="index.html">Главная</a> / <a class="crumbs__link" href="merch.html">Мерч</a></p>
         <h1 class="page-title">Мерч</h1>
-        <p class="page-lead">Четыре раздела: выберите блок — откроется каталог с фильтрами.</p>
+        <p class="page-lead">У каждой плашки свой мини-каталог, не общий каталог услуг.</p>
         <div class="merch-blocks">
-          <a class="merch-block" href="catalog.html">
+          <a class="merch-block" href="#breloki">
             <img class="merch-block__image" src="images/Merch/breloki.jpg" alt="Брелоки">
             <span class="merch-block__title">Брелоки</span>
             <span class="merch-block__text">от 700 ₽</span>
           </a>
-          <a class="merch-block" href="catalog.html">
+          <a class="merch-block" href="#stickers">
             <img class="merch-block__image" src="images/placeholder/work-02.jpg" alt="Стикеры">
             <span class="merch-block__title">Стикеры</span>
             <span class="merch-block__text">от 150 ₽</span>
           </a>
-          <a class="merch-block" href="catalog.html">
+          <a class="merch-block" href="#print">
             <img class="merch-block__image" src="images/Merch/tshirt.jpg" alt="Типография">
             <span class="merch-block__title">Типография</span>
             <span class="merch-block__text">от 1 200 ₽</span>
           </a>
-          <a class="merch-block" href="catalog.html">
+          <a class="merch-block" href="#accessories">
             <img class="merch-block__image" src="images/Merch/pins.jpg" alt="Аксессуары">
             <span class="merch-block__title">Аксессуары</span>
             <span class="merch-block__text">от 400 ₽</span>
           </a>
         </div>
+
+        <section class="merch-mini" id="breloki">
+          <h2 class="section__title">Брелоки</h2>
+          <p class="merch-mini__lead">Маленькие акриловые вещи с авторским принтом.</p>
+          <div class="catalog-products">
+            <article class="product-card">
+              <a class="product-card__link" href="products/brelok-korova.html"><img class="product-card__image" src="images/Merch/breloki.jpg" alt="Брелок «Космическая корова»"></a>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/brelok-korova.html">Брелок «Космическая корова»</a></h3>
+              <p class="product-card__price">900 ₽</p>
+              <a class="button button--small" href="products/brelok-korova.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="merch-mini" id="stickers">
+          <h2 class="section__title">Стикеры</h2>
+          <p class="merch-mini__lead">Наборы наклеек, которые можно заказать пачкой.</p>
+          <div class="catalog-products">
+            <article class="product-card">
+              <a class="product-card__link" href="products/stikerpak.html"><img class="product-card__image" src="images/placeholder/work-02.jpg" alt="Стикерпак «Космос»"></a>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/stikerpak.html">Стикерпак «Космос»</a></h3>
+              <p class="product-card__price">350 ₽</p>
+              <a class="button button--small" href="products/stikerpak.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="merch-mini" id="print">
+          <h2 class="section__title">Типография</h2>
+          <p class="merch-mini__lead">Футболки и блокноты с печатью.</p>
+          <div class="catalog-products">
+            <article class="product-card">
+              <a class="product-card__link" href="products/futbolka-kosmos.html"><img class="product-card__image" src="images/Merch/tshirt.jpg" alt="Футболка «Космос»"></a>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/futbolka-kosmos.html">Футболка «Космос»</a></h3>
+              <p class="product-card__price">1 500 ₽</p>
+              <a class="button button--small" href="products/futbolka-kosmos.html">Подробнее</a>
+            </article>
+            <article class="product-card">
+              <a class="product-card__link" href="products/bloknot.html"><img class="product-card__image" src="images/Merch/notebook.jpg" alt="Блокнот «Линия»"></a>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/bloknot.html">Блокнот «Линия»</a></h3>
+              <p class="product-card__price">1 200 ₽</p>
+              <a class="button button--small" href="products/bloknot.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="merch-mini" id="accessories">
+          <h2 class="section__title">Аксессуары</h2>
+          <p class="merch-mini__lead">Значки и кепки.</p>
+          <div class="catalog-products">
+            <article class="product-card">
+              <a class="product-card__link" href="products/znachki.html"><img class="product-card__image" src="images/Merch/pins.jpg" alt="Значки"></a>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/znachki.html">Значки</a></h3>
+              <p class="product-card__price">600 ₽</p>
+              <a class="button button--small" href="products/znachki.html">Подробнее</a>
+            </article>
+            <article class="product-card">
+              <a class="product-card__link" href="products/kepka.html"><img class="product-card__image" src="images/Merch/cap.jpg" alt="Кепка «Знак»"></a>
+              <h3 class="product-card__title"><a class="product-card__title-link" href="products/kepka.html">Кепка «Знак»</a></h3>
+              <p class="product-card__price">1 800 ₽</p>
+              <a class="button button--small" href="products/kepka.html">Подробнее</a>
+            </article>
+          </div>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
-      <nav class="site-footer__nav" aria-label="Навигация в подвале">
+  <div class="site-footer__inner">
+    <p class="site-footer__text">Творческая студия «Творчество» · учебный проект</p>
+    <nav class="site-footer__nav" aria-label="Навигация в подвале">
         <a class="site-footer__link" href="index.html">Главная</a>
-        <a class="site-footer__link" href="catalog.html">Каталог</a>
-        <a class="site-footer__link" href="order.html">Заявка</a>
-        <a class="site-footer__link" href="contacts.html#social">Соцсети</a>
-        <a class="site-footer__link" href="contacts.html#support">Тех.поддержка</a>
-        <a class="site-footer__link" href="original.html">Оригиналы</a>
-      </nav>
-      <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+        <a class="site-footer__link" href="index.html#advantages">Преимущества</a>
+        <a class="site-footer__link" href="index.html#popular">Популярные</a>
+        <a class="site-footer__link" href="index.html#contacts">Контакты</a>
+        <a class="site-footer__link" href="catalog.html">Каталог услуг</a>
+        <a class="site-footer__link" href="order.html">Заказ</a>
+        <a class="site-footer__link" href="contacts.html">Соцсети</a>
+        <a class="site-footer__link" href="original.html">Ориджин</a>
+    </nav>
+    <p class="site-footer__text">Широбокова Д. Д., ЭФБО-16-25</p>
+  </div>
+  <div class="site-footer__support" id="support">
+    <div class="site-footer__inner site-footer__support-inner">
+      <div>
+        <h2 class="support__title">Тех. поддержка</h2>
+        <p class="support__text">Если сайт работает некорректно, напишите сразу — ответим в течение рабочего дня.</p>
+      </div>
+      <form class="form support-form" method="post" action="#">
+        <h3>Написать в поддержку</h3>
+        <label class="field">
+          <span class="field__label">ФИО</span>
+          <input class="field__control" type="text" name="support-name" placeholder="Фамилия Имя Отчество" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Почта</span>
+          <input class="field__control" type="email" name="support-email" placeholder="you@example.ru" required>
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение</span>
+          <textarea class="field__control field__control--grow" name="support-message" rows="4" placeholder="Что случилось"></textarea>
+        </label>
+        <button class="button button--small" type="submit">Отправить</button>
+        <p class="form__note">Учебная форма: данные не отправляются на сервер.</p>
+      </form>
     </div>
-  </footer>
-
-  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+  </div>
+</footer>
+<div class="scroll-controls">
+  <a class="scroll-controls__btn" href="#main" aria-label="К началу содержимого">↑</a>
+  <a class="scroll-controls__btn scroll-controls__top" href="#top" aria-label="В начало страницы">⤒</a>
+</div>
 </body>
 </html>
